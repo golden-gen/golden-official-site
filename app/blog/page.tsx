@@ -16,7 +16,7 @@ export default function BlogPage() {
         <Link href="/" className="underline">
           Go back home
         </Link>
-        <div className="px-6 lg:px-20 mx-auto py-12 gap-4">
+        <div className="px-6 lg:px-20 mx-auto py-12 gap-4 overflow-x-hidden">
           <div className="bg-[#F4F4F4] px-6 py-4">
             <span className="font-bold font-Roboto">Blog</span>
           </div>
