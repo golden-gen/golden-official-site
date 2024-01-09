@@ -36,7 +36,7 @@ const Navbar = () => {
     { link: 'Team', path: '/team' },
   ]
   return (
-    <header className="w-full bg-white shadow-lg md:bg-transparent fixed top-0 left-o right-0 z-[100]">
+    <header className="w-full bg-white shadow-lg md:bg-transparent fixed top-0 left-o right-0 z-10">
       <nav
         className={`py-6 lg:px-20 px-6 ${
           isSticky
@@ -59,7 +59,7 @@ const Navbar = () => {
               <Link
                 href={item.path}
                 key={item.path}
-                className="block cursor-pointer text-lg hover:text-[#3498DB] font-bold"
+                className="block cursor-pointer text-lg hover:text-[#3498DB] focus:text-[#3498DB] focus:underline focus:underline-offset-8 focus:decoration-[#3498DB] focus:decoration-2 font-bold"
               >
                 {item.link}
               </Link>
@@ -102,6 +102,15 @@ const Navbar = () => {
               {item.link}
             </Link>
           ))}
+          <motion.button
+            whileHover={{ scale: 1.05, x: -4 }}
+            whileTap={{ scale: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Link href="#" className="bg-[#3498DB] text-white p-4 font-bold">
+              Donate
+            </Link>
+          </motion.button>
         </div>
       </nav>
     </header>
