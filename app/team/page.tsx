@@ -63,7 +63,7 @@ const page = () => {
           </motion.div>
 
           <motion.div
-            variants={fadeIn('down', 0.1)}
+            variants={fadeIn('up', 0.1)}
             initial={'hidden'}
             whileInView={'show'}
             viewport={{ once: false, amount: 0.5 }}
@@ -94,7 +94,7 @@ const page = () => {
             <img src="/images/Vector 29.png" alt="not seen" />
           </motion.div>
           <motion.div
-            variants={fadeIn('up', 0.1)}
+            variants={fadeIn('right', 0.1)}
             initial={'hidden'}
             whileInView={'show'}
             viewport={{ once: false, amount: 0.5 }}
