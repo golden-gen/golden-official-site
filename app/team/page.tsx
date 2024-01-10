@@ -1,5 +1,7 @@
 'use client'
 import React from 'react'
+import { motion } from 'framer-motion'
+import { fadeIn } from '../variants'
 import { teams } from './data'
 
 const page = () => {
@@ -7,17 +9,35 @@ const page = () => {
     <div className="mt-24">
       <div className="px-6 lg:px-20 mx-auto flex flex-col justify-center py-12 gap-4 overflow-x-hidden">
         <div className="bg-[#F4F4F4] px-6 py-4">
-          <div className="flex justify-between font-Roboto">
+          <motion.div
+            variants={fadeIn('right', 0.1)}
+            initial={'hidden'}
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.5 }}
+            className="flex justify-between font-Roboto"
+          >
             <p className="font-bold">Team</p>
             <p className="font-bold">GG2023</p>
-          </div>
+          </motion.div>
         </div>
         <div className="flex flex-col justify-center items-center gap-4 my-10">
-          <span className="text-xl mb-20">
+          <motion.span
+            variants={fadeIn('left', 0.1)}
+            initial={'hidden'}
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.5 }}
+            className="text-2xl mb-20"
+          >
             Meet few of our technical team members
-          </span>
+          </motion.span>
 
-          <div className="flex flex-wrap justify-center items-center mx-auto gap-x-12 gap-y-20">
+          <motion.div
+            variants={fadeIn('up', 0.1)}
+            initial={'hidden'}
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.5 }}
+            className="flex flex-wrap justify-center items-center mx-auto gap-x-12 gap-y-20"
+          >
             {teams.map((team) => {
               return (
                 <div key={team.id} className="w-full md:w-[20.6rem]">
@@ -40,9 +60,15 @@ const page = () => {
                 </div>
               )
             })}
-          </div>
+          </motion.div>
 
-          <div className="relative w-full pt-6 pb-6 md:pb-24 mb-20 md:my-16">
+          <motion.div
+            variants={fadeIn('down', 0.1)}
+            initial={'hidden'}
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.5 }}
+            className="relative w-full pt-6 pb-6 md:pb-24 mt-6 md:mt-16"
+          >
             <img
               src="/images/medals.png"
               alt="not seen"
@@ -57,7 +83,25 @@ const page = () => {
                 masterpiece of community development."`}
             </p>
             <p className="absolute bottom-16 md:top-64 md:right-20 right-1 text-xl font-Roboto space-y-4">{`“Unknown”`}</p>
-          </div>
+          </motion.div>
+          <motion.div
+            variants={fadeIn('left', 0.1)}
+            initial={'hidden'}
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.5 }}
+            className="flex justify-center items-center mb-8"
+          >
+            <img src="/images/Vector 29.png" alt="not seen" />
+          </motion.div>
+          <motion.div
+            variants={fadeIn('up', 0.1)}
+            initial={'hidden'}
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.5 }}
+            className="font-Roboto mb-20"
+          >
+            <span className="text-4xl">Meet our Sponsors</span>
+          </motion.div>
         </div>
       </div>
     </div>
