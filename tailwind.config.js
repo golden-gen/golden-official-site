@@ -16,6 +16,7 @@ module.exports = {
         Roboto: ['Roboto', 'sans-serif'],
         Manrope: ['Manrope', 'sans-serif'],
         SpaceGro: ['Space Grotesk', 'sans-serif'],
+        OpenSans: ['Open Sans', 'sans-serif'],
       },
     },
   },

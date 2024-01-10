@@ -49,7 +49,7 @@ const Navbar = () => {
             href="/"
             className="text-2xl font-semibold flex items-center space-x-1"
           >
-            <span className="font-bold text-3xl font-SpaceGro">
+            <span className="font-bold text-xl md:text-2xl lg:text-3xl items-center font-SpaceGro">
               GOLDEN GENERATION
             </span>
           </Link>
@@ -76,12 +76,12 @@ const Navbar = () => {
           </ul>
 
           {/* menu btn for only mobile devices */}
-          <div className="md:hidden">
+          <div className="md:hidden pt-2">
             <button onClick={toggleMenu} className="focus::outline-none">
               {isMenuOpen ? (
-                <FaXmark className="w-6 h-6" />
+                <FaXmark className="w-5 h-5" />
               ) : (
-                <FaBars className="w-6 h-6" />
+                <FaBars className="w-5 h-5" />
               )}
             </button>
           </div>
@@ -89,7 +89,7 @@ const Navbar = () => {
 
         {/* nav items for mobile devices  */}
         <div
-          className={`space-y-4 mt-20 px-4 py-7 bg-[#F9F9F9] z-3 ${
+          className={`space-y-4 mt-24 px-4 py-7 bg-[#F9F9F9] z-3 ${
             isMenuOpen ? 'block fixed top-0 left-0 right-0' : 'hidden'
           }`}
         >
