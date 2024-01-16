@@ -36,7 +36,7 @@ const Navbar = () => {
     { link: 'Team', path: '/team' },
   ]
   return (
-    <header className="w-full bg-white shadow-lg md:bg-transparent fixed top-0 left-o right-0 z-[100]">
+    <header className="w-full bg-white shadow-lg md:bg-transparent fixed top-0 left-o right-0 z-10">
       <nav
         className={`py-6 lg:px-20 px-6 ${
           isSticky
@@ -49,7 +49,7 @@ const Navbar = () => {
             href="/"
             className="text-2xl font-semibold flex items-center space-x-1"
           >
-            <span className="font-bold text-3xl font-SpaceGro">
+            <span className="font-bold text-xl md:text-2xl lg:text-3xl items-center font-SpaceGro">
               GOLDEN GENERATION
             </span>
           </Link>
@@ -59,7 +59,7 @@ const Navbar = () => {
               <Link
                 href={item.path}
                 key={item.path}
-                className="block cursor-pointer text-lg hover:text-[#3498DB] font-bold"
+                className="block cursor-pointer text-lg hover:text-[#3498DB] focus:text-[#3498DB] focus:underline focus:underline-offset-8 focus:decoration-[#3498DB] focus:decoration-2 font-bold"
               >
                 {item.link}
               </Link>
@@ -76,12 +76,12 @@ const Navbar = () => {
           </ul>
 
           {/* menu btn for only mobile devices */}
-          <div className="md:hidden">
+          <div className="md:hidden pt-2">
             <button onClick={toggleMenu} className="focus::outline-none">
               {isMenuOpen ? (
-                <FaXmark className="w-6 h-6" />
+                <FaXmark className="w-5 h-5" />
               ) : (
-                <FaBars className="w-6 h-6" />
+                <FaBars className="w-5 h-5" />
               )}
             </button>
           </div>
@@ -89,7 +89,7 @@ const Navbar = () => {
 
         {/* nav items for mobile devices  */}
         <div
-          className={`space-y-4 mt-20 px-4 py-7 bg-[#F9F9F9] z-3 ${
+          className={`space-y-4 mt-24 px-4 py-7 bg-[#F9F9F9] z-3 ${
             isMenuOpen ? 'block fixed top-0 left-0 right-0' : 'hidden'
           }`}
         >
@@ -102,6 +102,15 @@ const Navbar = () => {
               {item.link}
             </Link>
           ))}
+          <motion.button
+            whileHover={{ scale: 1.05, x: -4 }}
+            whileTap={{ scale: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Link href="#" className="bg-[#3498DB] text-white p-4 font-bold">
+              Donate
+            </Link>
+          </motion.button>
         </div>
       </nav>
     </header>
