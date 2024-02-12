@@ -7,10 +7,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: '#3498DB',
+        dark: '#333333',
+        grayish: '#888',
+        secondary: '#ECFAFF'
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+          'hero': "url('/images/hero.png')"
       },
       fontFamily: {
         Roboto: ['Roboto', 'sans-serif'],
