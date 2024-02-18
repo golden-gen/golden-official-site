@@ -83,7 +83,7 @@ export default function AboutPage() {
           initial={'hidden'}
           whileInView={'show'}
           viewport={{ once: false, amount: 0.5 }}
-          className="relative flex md:flex-col flex-wrap flex-row items-center justify-center mx-auto w-full mt-6 mt-12 md:mb-36 mb-10"
+          className="relative flex md:flex-col flex-wrap flex-row items-center justify-center mx-auto w-full mt-6 md:mt-12 md:mb-36 mb-10"
         >
           <img src="/images/Mask group.png" alt="not seen" />
           <img
