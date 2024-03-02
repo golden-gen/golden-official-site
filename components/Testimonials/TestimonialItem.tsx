@@ -19,7 +19,7 @@ export const TestimonialItem = ({ testimonial, name, isActive, image }:ITestimon
                 </div>
                 <p className={`${isActive? 'text-white' : 'text-gray-800'} text-sm font-semibold my-auto ml-3`}> {name}</p>
             </div>
-            <p className={`${isActive? 'text-white': 'text-gray-600'}`}>{testimonial}</p>
+            <p className={`${isActive? 'text-white line-clamp-12': 'text-gray-600 line-clamp-10'}`}>{testimonial}</p>
         </div>
     );
 };

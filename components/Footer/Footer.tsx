@@ -3,6 +3,7 @@ import { FacebookIcon, LinkedinIcon, TwitterIcon } from "../svg";
 import Link from "next/link";
 
 export const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-[#22262F] w-full">
       <div className="flex flex-col w-[90%] max-w-[1200px] mx-auto pt-[60px]">
@@ -76,7 +77,7 @@ export const Footer = () => {
         <hr className="text-grayish w-full hidden md:flex mb-10" />
         <div className="flex flex-col md:flex-row justify-center mb-[30px]">
           <p className="text-grayish mb-[27px] md:mb-0 text-center text-sm md:text-lg">
-            &copy; Copyright 2023 Golden Generation. All rights reserved.
+            &copy; Copyright {currentYear} Golden Generation. All rights reserved.
           </p>
         </div>
       </div>

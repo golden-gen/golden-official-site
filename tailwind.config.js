@@ -11,7 +11,8 @@ module.exports = {
         primary: '#3498DB',
         dark: '#333333',
         grayish: '#888',
-        secondary: '#ECFAFF'
+        secondary: '#ECFAFF',
+        'dark-primary': '#2179B5'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -25,7 +26,11 @@ module.exports = {
         SpaceGro: ['Space Grotesk', 'sans-serif'],
         OpenSans: ['Open Sans', 'sans-serif'],
       },
+      lineClamp: {
+        10: '10',
+        12: '12'
+      }
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 }

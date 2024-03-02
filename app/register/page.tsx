@@ -2,11 +2,8 @@ export default function Register() {
   return (
     <main>
       <h1 className="bg-[#FBFBFB] text-2xl font-semibold mt-36 py-6 text-center px-8 w-[90%] mx-auto">
-        Register to be a Golden Generation member
+        Register to become a member of Golden Generation
       </h1>
-      {/* <p className="text-center text-xl font-medium mt-8">
-        Become a member today by filling the form below:
-      </p> */}
       <div className="flex justify-center items-center w-full min-h-screen my-10 md:my-20">
         <div className="w-full max-w-3xl h-auto">
           <iframe

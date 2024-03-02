@@ -1,12 +1,13 @@
-'use client'
-import Link from 'next/link'
-import { blogData, blogData1 } from './data'
-import { BsStopwatch } from 'react-icons/bs'
-import { CiLock, CiSearch } from 'react-icons/ci'
-import { IoDocumentOutline } from 'react-icons/io5'
-import { FaYoutube, FaTwitter, FaInstagramSquare } from 'react-icons/fa'
-import { motion } from 'framer-motion'
-import { fadeIn } from '../variants'
+"use client";
+import Link from "next/link";
+import { blogData, blogData1 } from "./data";
+import { BsStopwatch } from "react-icons/bs";
+import { CiLock, CiSearch } from "react-icons/ci";
+import { IoDocumentOutline } from "react-icons/io5";
+import { FaYoutube, FaTwitter, FaInstagramSquare } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
+import Image from "next/image";
 
 export default function BlogPage() {
   return (
@@ -19,9 +20,9 @@ export default function BlogPage() {
           <div className="order-2 md:order-1 w-full md:w-3/5 grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-8">
             {blogData.map((blog) => (
               <motion.div
-                variants={fadeIn('right', 0.1)}
-                initial={'hidden'}
-                whileInView={'show'}
+                variants={fadeIn("right", 0.1)}
+                initial={"hidden"}
+                whileInView={"show"}
                 viewport={{ once: false, amount: 0.5 }}
                 key={blog.id}
                 className="flex flex-col gap-3"
@@ -52,7 +53,7 @@ export default function BlogPage() {
                   </div>
                   <div className="flex gap-1 items-center font-semibold">
                     <IoDocumentOutline />
-                    <Link href={'/'}>{blog.desc}</Link>
+                    <Link href={"/"}>{blog.desc}</Link>
                   </div>
                   <div className="md:w-[18.75rem] w-fit font-Roboto font-medium">
                     <span>
@@ -79,9 +80,9 @@ export default function BlogPage() {
           </div>
           <div className="order-1 md:order-2 w-full md:w-2/5 flex flex-col">
             <motion.div
-              variants={fadeIn('left', 0.1)}
-              initial={'hidden'}
-              whileInView={'show'}
+              variants={fadeIn("left", 0.1)}
+              initial={"hidden"}
+              whileInView={"show"}
               viewport={{ once: false, amount: 0.5 }}
             >
               <div className="relative border-none outline-none bg-[#FAFAFA] px-1 py-6 w-full md:w-96 mb-4">
@@ -111,71 +112,17 @@ export default function BlogPage() {
                   GOLDEN GENERATION
                 </h1>
               </div>
+              <Image
+                src="/logo.jpg"
+                alt="Golden Generation Logo"
+                width="400"
+                height="400"
+                className="w-full max-w-sm mx-auto"
+              />
             </motion.div>
-            {blogData1.map((card) => (
-              <motion.div
-                variants={fadeIn('up', 0.2)}
-                initial={'hidden'}
-                whileInView={'show'}
-                viewport={{ amount: 0.5 }}
-                key={card.id}
-                className="flex w-full flex-col gap-8 text-sm"
-              >
-                <div className="flex flex-col lg:flex-row w-full gap-4 mb-12 md:mb-28">
-                  <img
-                    src={card.image}
-                    alt=""
-                    className="lg:w-1/2 w-full h-auto"
-                  />
-                  <div className="flex w-full lg:w-1/2 flex-col text-sm gap-2 md:pr-0 pr-2">
-                    <Link
-                      href="/"
-                      className="w-full md:w-[12.5rem] font-Manrope font-bold"
-                    >
-                      {card.title}
-                    </Link>
-                    <div className="flex flex-col md:flex-row font-Manrope w-[20rem] font-semibold gap-1">
-                      <div className="flex items-center gap-1">
-                        <BsStopwatch />
-                        <p>{card.date}</p>
-                      </div>
-                      {card.heading && (
-                        <div className="flex items-center gap-1">
-                          <CiLock />
-                          <p>{card.heading}</p>
-                        </div>
-                      )}
-                    </div>
-                    <div className="flex gap-1 items-center font-semibold">
-                      <IoDocumentOutline />
-                      <Link href={'/'}>{card.desc}</Link>
-                    </div>
-                    <div className="w-full font-Roboto font-medium">
-                      <span className="tracking-tight leading-1">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit
-                        cum, leo ridiculus curabitur euismod gravida feugiat
-                        tristique varius eros, quam volutpat mauris lacus fusce
-                        turpis sociosqu. osuere ut etiam tortor lacinia. Ante
-                        elementum facilisi montes commodo vivamus parturient sem
-                        facilisis malesuada
-                      </span>
-                    </div>{' '}
-                    <motion.div
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="flex mt-4 items-center justify-center py-4 w-52 bg-[#3498DB] font-Manrope cursor-pointer hover:bg-[#4D4D4D] transition-all duration-300"
-                    >
-                      <button className="text-white text-sm font-semibold">
-                        See More
-                      </button>
-                    </motion.div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </div>
       </div>
     </main>
-  )
+  );
 }
