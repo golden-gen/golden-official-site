@@ -27,6 +27,7 @@ module.exports = {
         OpenSans: ['Open Sans', 'sans-serif'],
       },
       lineClamp: {
+        8: '8',
         10: '10',
         12: '12'
       }

@@ -2,15 +2,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html {
     height: 100%;
     min-height: 100vh;
 }
-*, html, body {
+
+*,
+html,
+body {
     padding: 0;
     margin: 0;
     box-sizing: border-box !important;
+    scroll-behavior: smooth;
 }
+
 .container::after {
     position: absolute;
     content: '';
@@ -31,4 +37,18 @@ html {
     top: -10px;
     right: -10px;
     z-index: -1;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.typing-cursor {
+    animation: blink 1s step-end infinite;
+}
+
+button {
+    border-radius: 0.5rem;
 }

@@ -11,7 +11,7 @@ import team1 from "../public/images/team1.png";
 import team2 from "../public/images/team2.png";
 import team3 from "../public/images/team3.png";
 import { Testimonials } from "@/components";
-import { AnimatedNumber, RegistrationModal } from "./components";
+import { AnimatedNumber, RegistrationModal, TypingEffect } from "./components";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -38,7 +38,7 @@ export default function Home() {
               height={200}
             />
             <h1 className="uppercase font-semibold text-4xl md:text-[4.375rem] md:leading-tight 2xl:text-[7.375rem] text-center text-white max-w-[26ch]">
-              Every Home Deserves a Golden Child
+              Every Home Deserves <br /> <TypingEffect />
             </h1>
             <svg
               className="sm:translate-x-10 w-[100px] md:w-[200px]"
@@ -90,8 +90,8 @@ export default function Home() {
                 To be useful for ourselves, community and all kind.
               </li>
               <li className="list-disc">
-                To identify, recognize and make use of the talent of our for
-                society development.
+                To identify, recognize and make use of the talent of our youth
+                for society development.
               </li>
             </ul>
           </div>
@@ -119,9 +119,9 @@ export default function Home() {
       <section>
         <div className="w-full mx-auto space-y-[10px] flex flex-col items-center pt-[72px] pb-[91px]">
           <h1 className="text-4xl font-semibold text-center">
-            Our Serving Executives
+            Our Serving Executives.
           </h1>
-          <p className="text-center font-semibold max-w-[64ch]">
+          <p className="text-center font-semibold max-w-[64ch] px-4">
             Golden Generation programs are being organized by a body of
             individuals passionate about community development and are excited
             to share their experience, techniques, and professional journeys
@@ -159,7 +159,7 @@ export default function Home() {
                 </div>
                 <p className="text-center mb-10">
                   The president of our dear organization and the CEO, Elite
-                  Computer Technologies
+                  Computer Technologies.
                 </p>
               </div>
               <div className="bg-[#F9F9F9] shadow rounded-lg flex flex-col items-center px-4">
@@ -191,7 +191,7 @@ export default function Home() {
                 </div>
                 <p className="text-center mb-10">
                   The organization current coordinator and the technical team
-                  content creator
+                  content creator.
                 </p>
               </div>
               <div className="bg-[#F9F9F9] shadow rounded-lg flex flex-col items-center px-4">
@@ -223,17 +223,17 @@ export default function Home() {
                 </div>
                 <p className="text-center mb-10">
                   The organization assistance coordinator and one of the
-                  technical team frontend developers
+                  technical team frontend developers.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="w-[90%] max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between gap-16 md:gap-8 mt-10 mb-16 md:mt-[60px] md:mb-[100px]">
+      <section className="w-[calc(100%_-_32px)] max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between gap-16 md:gap-8 mt-10 mb-16 md:mt-[60px] md:mb-[100px]">
         <div className="space-y-6 w-full md:w-3/5">
           <h1 className="text-4xl font-semibold font-Poppins text-center md:text-left">
-            Golden Generation For You
+            Golden Generation For You.
           </h1>
           <p className="text-xl text-justify font-Roboto">
             Our organization provides a variety of programs and services to help
@@ -262,7 +262,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="w-[90%] max-w-[1200px] mx-auto space-y-10 md:space-y-16 mb-16">
+      <section className="w-[calc(100%_-_32px)] max-w-[1200px] mx-auto space-y-10 md:space-y-16 mb-16">
         <h1 className="text-4xl font-semibold font-Roboto text-center">
           Popular GG Quiz & Debate
         </h1>
@@ -281,7 +281,7 @@ export default function Home() {
             </div>
             <p className="px-2.5">
               Annual Golden Generation Quiz Competition for Senior Secondary
-              School Students
+              School Students.
             </p>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -303,7 +303,7 @@ export default function Home() {
             </div>
             <p className="px-2.5">
               Annual Golden Generation Debate Competition [English Language] for
-              Senior Secondary School Students
+              Senior Secondary School Students.
             </p>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -325,7 +325,7 @@ export default function Home() {
             </div>
             <p className="px-2.5">
               Annual Golden Generation Debate Competition [Yoruba Language] for
-              Senior Secondary School Students
+              Senior Secondary School Students.
             </p>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -336,7 +336,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-[90%] max-w-[1200px] mx-auto space-y-10 md:space-y-16 mb-16">
+      <section className="w-[calc(100%_-_32px)] max-w-[1200px] mx-auto space-y-10 md:space-y-16 mb-16">
         <h1 className="text-3xl font-semibold font-Poppins text-[#333333] text-center">
           Our Activities
         </h1>

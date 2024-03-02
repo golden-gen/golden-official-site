@@ -1,30 +1,32 @@
-'use client'
-import React from 'react'
-import { motion } from 'framer-motion'
-import { fadeIn } from '../variants'
-import { teams } from './data'
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
+import { teams } from "./data";
+import Link from "next/link";
 
 const page = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <div className="mt-24">
       <div className="px-6 lg:px-20 mx-auto flex flex-col justify-center py-12 gap-4 overflow-x-hidden">
         <div className="bg-[#F4F4F4] px-6 py-4">
           <motion.div
-            variants={fadeIn('right', 0.1)}
-            initial={'hidden'}
-            whileInView={'show'}
+            variants={fadeIn("right", 0.1)}
+            initial={"hidden"}
+            whileInView={"show"}
             viewport={{ once: false, amount: 0.5 }}
             className="flex justify-between font-Roboto"
           >
             <p className="font-bold">Team</p>
-            <p className="font-bold">GG2023</p>
+            <p className="font-bold">GG{currentYear}</p>
           </motion.div>
         </div>
         <div className="flex flex-col justify-center items-center gap-4 my-10">
           <motion.span
-            variants={fadeIn('left', 0.1)}
-            initial={'hidden'}
-            whileInView={'show'}
+            variants={fadeIn("left", 0.1)}
+            initial={"hidden"}
+            whileInView={"show"}
             viewport={{ once: false, amount: 0.5 }}
             className="text-2xl mb-20"
           >
@@ -32,9 +34,9 @@ const page = () => {
           </motion.span>
 
           <motion.div
-            variants={fadeIn('up', 0.1)}
-            initial={'hidden'}
-            whileInView={'show'}
+            variants={fadeIn("up", 0.1)}
+            initial={"hidden"}
+            whileInView={"show"}
             viewport={{ once: false, amount: 0.5 }}
             className="flex flex-wrap justify-center items-center mx-auto gap-x-12 gap-y-20"
           >
@@ -58,14 +60,14 @@ const page = () => {
                     </div>
                   </div>
                 </div>
-              )
+              );
             })}
           </motion.div>
 
           <motion.div
-            variants={fadeIn('up', 0.1)}
-            initial={'hidden'}
-            whileInView={'show'}
+            variants={fadeIn("up", 0.1)}
+            initial={"hidden"}
+            whileInView={"show"}
             viewport={{ once: false, amount: 0.5 }}
             className="relative w-full pt-6 pb-6 md:pb-24 mt-6 md:mt-16"
           >
@@ -85,27 +87,37 @@ const page = () => {
             <p className="absolute bottom-16 md:top-64 md:right-20 right-1 text-xl font-Roboto space-y-4">{`“Unknown”`}</p>
           </motion.div>
           <motion.div
-            variants={fadeIn('left', 0.1)}
-            initial={'hidden'}
-            whileInView={'show'}
+            variants={fadeIn("left", 0.1)}
+            initial={"hidden"}
+            whileInView={"show"}
             viewport={{ once: false, amount: 0.5 }}
             className="flex justify-center items-center mb-8"
           >
             <img src="/images/Vector 29.png" alt="not seen" />
           </motion.div>
           <motion.div
-            variants={fadeIn('right', 0.1)}
-            initial={'hidden'}
-            whileInView={'show'}
+            variants={fadeIn("right", 0.1)}
+            initial={"hidden"}
+            whileInView={"show"}
             viewport={{ once: false, amount: 0.5 }}
-            className="font-Roboto mb-20"
+            className="font-Roboto mb-20 text-center"
+            id="sponsors"
           >
-            <span className="text-4xl">Meet our Sponsors</span>
+            <h2 className="text-4xl">Meet our Sponsors</h2>
+            <p className="mt-4 text-center">
+              No sponsor yet, you can become one by{" "}
+              <Link
+                href="/donate"
+                className="underline underline-offset-4 hover:text-primary"
+              >
+                donating now
+              </Link>
+            </p>
           </motion.div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

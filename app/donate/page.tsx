@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { PaystackCheckout } from "./paystack-checkout";
+import Link from "next/link";
 
 export default function Donate() {
   const [openModal, setOpenModal] = useState(false);
@@ -12,8 +13,14 @@ export default function Donate() {
       <div className="flex">
         <div className="w-[90%] max-w-[819px] mx-auto py-10 mt-5 mb-10 px-5 md:px-[60px] bg-light border border-[rgba(11,40,81,0.20)]">
           <div className="mb-10 font-medium text-xl text-center">
-            By donating you become a part of our journey towards making our
-            communities better
+            Donate today and stand a chance to be recognized among our esteemed
+            sponsors.{" "}
+            <Link
+              href="/team#sponsors"
+              className="hover:text-primary inline-flex"
+            >
+              View the list of our previous donors. &raquo;
+            </Link>
           </div>
           <div className="flex flex-col md:flex-row justify-between">
             <div className="mb-[30px] md:mb-0">
@@ -32,7 +39,10 @@ export default function Donate() {
               </div>
             </div>
             <div className="flex flex-col gap-5 items-center md:items-start">
-              <button onClick={()=>setOpenModal(true)} className="bg-primary text-white text-[15px] w-fit rounded-lg px-3 py-2 font-medium flex items-center shrink-0 transition duration-200 active:scale-100 hover:scale-90">
+              <button
+                onClick={() => setOpenModal(true)}
+                className="bg-primary text-white text-[15px] w-fit rounded-lg px-3 py-2 font-medium flex items-center shrink-0 transition duration-200 active:scale-100 hover:scale-90"
+              >
                 Donate Via Paystack
                 <svg
                   className="ml-[10px]"
@@ -53,7 +63,7 @@ export default function Donate() {
         </div>
       </div>
       {openModal && (
-        <div className="h-screen w-full fixed z-50 top-0 left-0 bg-black/30 backdrop-blur-sm flex justify-center">
+        <div className="fixed inset-0 overflow-auto z-50 top-0 left-0 bg-black/30 backdrop-blur-sm flex justify-center">
           <PaystackCheckout setOpenModal={setOpenModal} />
         </div>
       )}

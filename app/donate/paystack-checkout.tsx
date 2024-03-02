@@ -16,7 +16,7 @@ export const PaystackCheckout: React.FC<PaystackCheckoutProps> = ({
   const config = {
     reference: new Date().getTime().toString(),
     email: paymentEmail,
-    amount: amount && amount * 100, //Amount is in the country's lowest currency. E.g Kobo, so 20000 kobo = N200
+    amount: amount && amount * 100,
     publicKey: "pk_test_c865641c02971ec5d05a61916f33a4b861f80da5",
   };
   const handlePaystackSuccessAction = (reference: any) => {
@@ -37,11 +37,23 @@ export const PaystackCheckout: React.FC<PaystackCheckoutProps> = ({
   };
   const prices = [1000, 2000, 3000, 4000, 5000, 10000, 20000, 50000];
 
+  const donationTiers: { [key: number]: string } = {
+    1000: "Bronze",
+    2000: "Silver",
+    3000: "Gold",
+    4000: "Platinum",
+    5000: "Diamond",
+    10000: "Emerald",
+    20000: "Ruby",
+    50000: "Sapphire",
+  };
+
   return (
-    <div className="relative my-auto p-10 bg-white rounded-lg h-fit w-[90%] max-w-fit">
+    <div className="relative my-auto p-8 bg-white rounded-lg h-fit w-[90%] max-w-md">
       <button
         onClick={() => setOpenModal(false)}
-        className="absolute top-4 right-4 text-2xl"
+        className="absolute top-4 right-4 text-2xl hover:scale-90 transition duration-200"
+        aria-label="Close Modal"
       >
         ❌
       </button>
@@ -63,7 +75,7 @@ export const PaystackCheckout: React.FC<PaystackCheckoutProps> = ({
       </div>
       <div className="mb-4 flex flex-col">
         <label htmlFor="price" className="my-2 text-lg text-[#808097]">
-          Amount to donate
+          Amount to donate - category
         </label>
         <select
           value={amount}
@@ -75,7 +87,9 @@ export const PaystackCheckout: React.FC<PaystackCheckoutProps> = ({
           {prices?.map((s, idx) => (
             <option key={idx} value={s}>
               {" "}
-              <span className="text">₦{s.toLocaleString()}.00K</span>
+              <span className="text">
+                ₦{s.toLocaleString()} - {donationTiers[s]} sponsor
+              </span>
             </option>
           ))}
         </select>

@@ -20,8 +20,8 @@ export const Footer = () => {
               </Link>
             </div>
             <p className="text-white">
-              Set yourself up for success with reimagined learning to empower
-              your personal and professional growth.
+              Set yourself up for success by becoming a golden member for your
+              personal and professional growth.
             </p>
           </div>
           <div className="grid grid-cols-4 sm:grid-cols-6 col-span-6 order-2 mb-[60px] md:mb-0 gap-6 pt-2">
@@ -77,7 +77,8 @@ export const Footer = () => {
         <hr className="text-grayish w-full hidden md:flex mb-10" />
         <div className="flex flex-col md:flex-row justify-center mb-[30px]">
           <p className="text-grayish mb-[27px] md:mb-0 text-center text-sm md:text-lg">
-            &copy; Copyright {currentYear} Golden Generation. All rights reserved.
+            &copy; Copyright {currentYear} Golden Generation. All rights
+            reserved.
           </p>
         </div>
       </div>

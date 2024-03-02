@@ -90,7 +90,7 @@ const Navbar = () => {
             ))}
             <Link
               href="/donate"
-              className="bg-primary hover:bg-dark-primary transition duration-200 text-white p-4 py-2 font-bold"
+              className="bg-primary hover:bg-dark-primary transition duration-200 text-white p-4 py-2 font-bold rounded-lg"
             >
               Donate
             </Link>
