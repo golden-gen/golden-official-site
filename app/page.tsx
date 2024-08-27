@@ -70,67 +70,58 @@ export default function Home() {
             Become a Member
           </button>
         </div>
-        <div className="flex flex-col md:flex-row items-center w-[90%] md:w-[70%] max-w-[882px] mx-auto space-y-6 md:space-y-0">
-          <div className="w-full md:w-[347px]">
-            <h2 className="text-3xl md:text-[2.5rem] md:leading-tight font-semibold md:max-w-[12ch] text-center md:text-left uppercase">
-              Our Objectives{" "}
-            </h2>
-          </div>
-          <div>
-            <ul className="space-y-[10px] font-semibold w-[90%] ml-auto">
-              <li className="list-disc">To eradicate poverty among youth.</li>
-              <li className="list-disc">
-                To brighten the future of generation.
-              </li>
-              <li className="list-disc">
-                To build youth and teenagers for humanities.
-              </li>
-
-              <li className="list-disc">
-                To be useful for ourselves, community and all kind.
-              </li>
-              <li className="list-disc">
-                To identify, recognize and make use of the talent of our youth
-                for society development.
-              </li>
-            </ul>
+        <div className="flex flex-col items-center mx-auto space-y-6 md:space-y-0">
+          <p className="text-center font-semibold text-lg pt-3 md:pt-6 pb-4 md:pb-12 font-Manrope">
+            Registration page for membership
+          </p>
+          <h2 className="text-3xl md:leading-tight font-semibold text-center uppercase font-Roboto pb-4 md:pb-6">
+            Our Objectives
+          </h2>
+          <div className="w-full md:w-[700px] text-center font-Roboto text-lg pb-4 md:pb-8 text-blackish px-6 md:px-auto">
+            <p>
+              To build youth and teenagers for humanities | To brighten the
+              future of generation To eradicate poverty among youth | To
+              identify, recognize and make use of the talent of our for society
+              development | To be useful for ourselves, community and all kind.
+            </p>
           </div>
         </div>
         <div className="bg-[#22262F] w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-5 mx-8 my-8 md:my-[70px] md:mx-[100px] gap-[30px]">
-            <div className="uppercase text-white bg-primary p-6 font-bold text-[27px] w-full max-w-[380px] mx-auto sm:mx-0">
-              <AnimatedNumber value={4} /> Local Govts. Outreach
+          <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-5 mx-8 my-8 md:my-[70px] md:mx-[132px] gap-[30px]">
+            <div className="text-white bg-primary p-6 font-bold text-[27px] w-full max-w-[380px] mx-auto sm:mx-0">
+              <AnimatedNumber value={4} /> Local governments outreach
             </div>
             <div className="uppercase text-white bg-primary p-6 font-bold text-[27px] w-full max-w-[380px] mx-auto sm:mx-0">
-              <AnimatedNumber value={20} />+ Schools Outreach
+              <AnimatedNumber value={20} />+ Schools <br /> Outreach
             </div>
             <div className="uppercase text-white bg-primary p-6 font-bold text-[27px] w-full max-w-[380px] mx-auto sm:mx-0">
-              <AnimatedNumber value={1000} />+ Students Impact
+              <AnimatedNumber value={1000} />+ Students
+              <br />
+              Impact
             </div>
             <div className="uppercase text-white bg-primary p-6 font-bold text-[27px] w-full max-w-[380px] mx-auto sm:mx-0">
-              <AnimatedNumber value={10} />+ Leading Members
+              <AnimatedNumber value={10} />+ <br /> Leading Members
             </div>
             <div className="uppercase text-white bg-primary p-6 font-bold text-[27px] w-full max-w-[380px] mx-auto sm:mx-0">
-              <AnimatedNumber value={100} />+ Growing Members
+              <AnimatedNumber value={100} />+ <br />
+              Growing Members
             </div>
           </div>
         </div>
       </section>
       <section>
-        <div className="w-full mx-auto space-y-[10px] flex flex-col items-center pt-[72px] pb-[91px]">
-          <h1 className="text-4xl font-semibold text-center">
+        <div className="w-full mx-auto space-y-[6px] flex flex-col items-center pt-[72px] pb-[91px]">
+          <h1 className="text-3xl font-semibold text-center font-Roboto pb-4">
             Our Serving Executives.
           </h1>
-          <p className="text-center font-semibold max-w-[64ch] px-4">
-            Golden Generation programs are being organized by a body of
-            individuals passionate about community development and are excited
-            to share their experience, techniques, and professional journeys
-            with you.
+          <p className="text-center text-lg w-full px-6 md:w-[40rem] text-blackish">
+            Golden Generation Classes are taught by industry leaders excited to{" "}
+            share their tools, techniques, and Professional journey with you.
           </p>
           <div className="relative">
             <div className="absolute bg-primary hidden md:flex w-full h-1/3 top-1/3 -z-10 mt-10"></div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto w-[90%] max-w-md md:max-w-6xl mt-10 md:mt-20">
-              <div className="bg-[#F9F9F9] shadow rounded-lg flex flex-col items-center px-4">
+              <div className="bg-[#F9F9F9] font-Roboto shadow rounded-lg flex flex-col items-center px-4">
                 <div className="my-[25px] relative">
                   <Image
                     src={team1}
@@ -153,8 +144,10 @@ export default function Home() {
                     </svg>
                   </div>
                 </div>
-                <div className="flex flex-col items-center mb-6">
-                  <h3 className="text-center">Jimoh Lawal Akinlabi</h3>
+                <div className="flex flex-col items-center mb-4 md:mb-10 text-lg font-Roboto">
+                  <h3 className="text-center font-bold">
+                    Jimoh Lawal Akinlabi
+                  </h3>
                   <h4>President</h4>
                 </div>
                 <p className="text-center mb-10">
@@ -162,7 +155,7 @@ export default function Home() {
                   Computer Technologies.
                 </p>
               </div>
-              <div className="bg-[#F9F9F9] shadow rounded-lg flex flex-col items-center px-4">
+              <div className="bg-[#F9F9F9] shadow rounded-lg flex flex-col items-center px-4 font-Roboto">
                 <div className="my-[25px] relative">
                   <Image
                     src={team2}
@@ -185,11 +178,13 @@ export default function Home() {
                     </svg>
                   </div>
                 </div>
-                <div className="flex flex-col items-center mb-6">
-                  <h3 className="text-center">Adebayo Faruq Adebayo</h3>
+                <div className="flex flex-col items-center mb-4 md:mb-10 font-Roboto text-lg">
+                  <h3 className="text-center font-bold">
+                    Adebayo Faruq Adebayo
+                  </h3>
                   <h4>Coordinator</h4>
                 </div>
-                <p className="text-center mb-10">
+                <p className="text-center mb-10 font-Roboto">
                   The organization current coordinator and the technical team
                   content creator.
                 </p>
@@ -217,8 +212,10 @@ export default function Home() {
                     </svg>
                   </div>
                 </div>
-                <div className="flex flex-col items-center mb-6">
-                  <h3 className="text-center">Abdrahman Adebayo Oladimeji</h3>
+                <div className="flex flex-col items-center mb-4 md:mb-10 font-Roboto text-lg">
+                  <h3 className="text-center font-bold">
+                    Abdrahman Adebayo Oladimeji
+                  </h3>
                   <h4>Asst. Coordinator</h4>
                 </div>
                 <p className="text-center mb-10">
@@ -231,11 +228,11 @@ export default function Home() {
         </div>
       </section>
       <section className="w-[calc(100%_-_32px)] max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between gap-16 md:gap-8 mt-10 mb-16 md:mt-[60px] md:mb-[100px]">
-        <div className="space-y-6 w-full md:w-3/5">
-          <h1 className="text-4xl font-semibold font-Poppins text-center md:text-left">
-            Golden Generation For You.
+        <div className="flex flex-col justify-center md:justify-start space-y-6 px-6 md:px-auto w-full md:w-3/5">
+          <h1 className="text-3xl font-semibold font-Poppins text-center md:text-left">
+            Golden Generation for Teams
           </h1>
-          <p className="text-xl text-justify font-Roboto">
+          <p className="text-xl w-full md:w-3/4 capitalize font-Roboto text-center md:text-left px-4 md:px-0">
             Our organization provides a variety of programs and services to help
             youth build self-confidence, develop leadership skills, and make
             positive contributions to their community our club offers a range of
@@ -246,7 +243,7 @@ export default function Home() {
           </p>
           <button
             onClick={() => push("/about")}
-            className="uppercase py-[15px] px-[22px] bg-primary hover:bg-dark-primary transition duration-200 text-white font-Roboto text-[19px]"
+            className="uppercase py-[15px] w-full md:w-[28rem] px-8 bg-primary hover:bg-dark-primary transition duration-200 text-white font-Roboto text-[19px]"
           >
             Learn More
           </button>
@@ -264,7 +261,7 @@ export default function Home() {
       </section>
       <section className="w-[calc(100%_-_32px)] max-w-[1200px] mx-auto space-y-10 md:space-y-16 mb-16">
         <h1 className="text-4xl font-semibold font-Roboto text-center">
-          Popular GG Quiz & Debate
+          Trending GG2023 Competition
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-5">
           <div className="flex flex-col max-w-[348px] mx-auto space-y-5">
@@ -279,7 +276,7 @@ export default function Home() {
                 className="w-full"
               />
             </div>
-            <p className="px-2.5">
+            <p className="px-2.5 font-Roboto font-semibold">
               Annual Golden Generation Quiz Competition for Senior Secondary
               School Students.
             </p>
@@ -287,7 +284,7 @@ export default function Home() {
               onClick={() => setIsOpen(!isOpen)}
               className="uppercase py-[15px] px-[22px] bg-primary hover:bg-dark-primary transition duration-200 text-white font-Roboto text-[19px] w-full text-center"
             >
-              Register
+              JOIN TEAM
             </button>
           </div>
           <div className="flex flex-col max-w-[348px] mx-auto space-y-5">
@@ -301,7 +298,7 @@ export default function Home() {
                 className="w-full"
               />
             </div>
-            <p className="px-2.5">
+            <p className="px-2.5 font-Roboto font-semibold">
               Annual Golden Generation Debate Competition [English Language] for
               Senior Secondary School Students.
             </p>
@@ -309,7 +306,7 @@ export default function Home() {
               onClick={() => setIsOpen(!isOpen)}
               className="uppercase py-[15px] px-[22px] bg-primary hover:bg-dark-primary transition duration-200 text-white font-Roboto text-[19px] w-full text-center"
             >
-              Register
+              JOIN TEAM
             </button>
           </div>
           <div className="flex flex-col max-w-[348px] mx-auto space-y-5">
@@ -323,7 +320,7 @@ export default function Home() {
                 className="w-full"
               />
             </div>
-            <p className="px-2.5">
+            <p className="px-2.5 font-Roboto font-semibold">
               Annual Golden Generation Debate Competition [Yoruba Language] for
               Senior Secondary School Students.
             </p>
@@ -331,7 +328,7 @@ export default function Home() {
               onClick={() => setIsOpen(!isOpen)}
               className="uppercase py-[15px] px-[22px] bg-primary hover:bg-dark-primary transition duration-200 text-white font-Roboto text-[19px] w-full text-center"
             >
-              Register
+              JOIN TEAM
             </button>
           </div>
         </div>
