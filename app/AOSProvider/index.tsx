@@ -11,7 +11,7 @@ export default function AOSProvider({
 }) {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 300,
       once: false,
     });
   }, []);
