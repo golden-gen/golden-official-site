@@ -7,9 +7,9 @@ import ggq3 from "../public/images/quiz3.jpg";
 import act1 from "../public/images/act1.jpg";
 import act2 from "../public/images/act2.jpg";
 import act3 from "../public/images/act1.jpg";
-import team1 from "../public/images/team1.png";
-import team2 from "../public/images/team2.png";
-import team3 from "../public/images/team3.png";
+import team1 from "../public/team/elite.png";
+import team2 from "../public/team/faruq.png";
+import team3 from "../public/team/rahmlad.png";
 import { Testimonials } from "@/components";
 import { AnimatedNumber, RegistrationModal, TypingEffect } from "./components";
 import { useRouter } from "next/navigation";
@@ -149,23 +149,9 @@ export default function Home() {
                   <Image
                     src={team1}
                     alt="President"
-                    className="z-10 relative"
+                    className="z-10 relative rounded-full"
                   />
-                  <div className="absolute inset-x-0 bottom-0 rotate-180 -translate-y-[22px]">
-                    <svg
-                      className="h-full w-full scale-110 -z-10"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="186"
-                      height="131"
-                      viewBox="0 0 186 131"
-                      fill="none"
-                    >
-                      <path
-                        d="M179.176 5.36343C184.551 19.526 186.351 34.7958 184.415 49.8201C182.48 64.8444 176.869 79.1595 168.08 91.4974C159.29 103.835 147.594 113.815 134.027 120.553C120.459 127.291 105.439 130.579 90.2976 130.125C75.1559 129.672 60.3598 125.491 47.2198 117.953C34.0799 110.416 23.0016 99.7537 14.9664 86.9119C6.93124 74.0701 2.1871 59.4449 1.15425 44.3317C0.121399 29.2185 2.83172 14.0838 9.04513 0.268303L93.0551 38.0511L179.176 5.36343Z"
-                        fill="#3498DB"
-                      />
-                    </svg>
-                  </div>
+                  
                 </div>
                 <div className="flex flex-col items-center mb-4 md:mb-10 text-lg font-Roboto">
                   <h3 className="text-center font-bold">
@@ -188,23 +174,8 @@ export default function Home() {
                   <Image
                     src={team2}
                     alt="Coordinator"
-                    className="z-10 relative"
+                    className="z-10 relative rounded-full"
                   />
-                  <div className="absolute inset-x-0 bottom-0 rotate-90 -translate-y-[11px] -translate-x-2.5">
-                    <svg
-                      className="h-full w-full scale-110 -z-10"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="186"
-                      height="131"
-                      viewBox="0 0 186 131"
-                      fill="none"
-                    >
-                      <path
-                        d="M179.176 5.36343C184.551 19.526 186.351 34.7958 184.415 49.8201C182.48 64.8444 176.869 79.1595 168.08 91.4974C159.29 103.835 147.594 113.815 134.027 120.553C120.459 127.291 105.439 130.579 90.2976 130.125C75.1559 129.672 60.3598 125.491 47.2198 117.953C34.0799 110.416 23.0016 99.7537 14.9664 86.9119C6.93124 74.0701 2.1871 59.4449 1.15425 44.3317C0.121399 29.2185 2.83172 14.0838 9.04513 0.268303L93.0551 38.0511L179.176 5.36343Z"
-                        fill="#3498DB"
-                      />
-                    </svg>
-                  </div>
                 </div>
                 <div className="flex flex-col items-center mb-4 md:mb-10 font-Roboto text-lg">
                   <h3 className="text-center font-bold">
@@ -227,23 +198,8 @@ export default function Home() {
                   <Image
                     src={team3}
                     alt="Asst. Coordinator"
-                    className="z-10 relative"
+                    className="z-10 relative rounded-full"
                   />
-                  <div className="absolute inset-x-0 bottom-0">
-                    <svg
-                      className="h-full w-full scale-110 -z-10"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="186"
-                      height="131"
-                      viewBox="0 0 186 131"
-                      fill="none"
-                    >
-                      <path
-                        d="M179.176 5.36343C184.551 19.526 186.351 34.7958 184.415 49.8201C182.48 64.8444 176.869 79.1595 168.08 91.4974C159.29 103.835 147.594 113.815 134.027 120.553C120.459 127.291 105.439 130.579 90.2976 130.125C75.1559 129.672 60.3598 125.491 47.2198 117.953C34.0799 110.416 23.0016 99.7537 14.9664 86.9119C6.93124 74.0701 2.1871 59.4449 1.15425 44.3317C0.121399 29.2185 2.83172 14.0838 9.04513 0.268303L93.0551 38.0511L179.176 5.36343Z"
-                        fill="#3498DB"
-                      />
-                    </svg>
-                  </div>
                 </div>
                 <div className="flex flex-col items-center mb-4 md:mb-10 font-Roboto text-lg">
                   <h3 className="text-center font-bold">
@@ -263,12 +219,12 @@ export default function Home() {
       <section className="w-[calc(100%_-_32px)] max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between gap-16 md:gap-8 mt-10 mb-16 md:mt-[60px] md:mb-[100px]">
         <div
           data-aos="fade-up-left"
-          className="flex flex-col justify-center md:justify-start space-y-6 px-6 md:px-auto w-full md:w-3/5"
+          className="flex flex-col justify-center md:justify-start space-y-6 px-auto w-full md:w-3/5"
         >
           <h1 className="text-3xl font-semibold font-Poppins text-center md:text-left">
             Golden Generation for Teams
           </h1>
-          <p className="text-xl w-full md:w-3/4 capitalize font-Roboto text-center md:text-left px-4 md:px-0">
+          <p className="text-base sm:text-xl w-full md:w-3/4 capitalize font-Roboto text-justify md:text-left px-0">
             Our organization provides a variety of programs and services to help
             youth build self-confidence, develop leadership skills, and make
             positive contributions to their community our club offers a range of
