@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import CountUp from "react-countup";
 
 interface AnimatedNumberProps {
   value: number;
@@ -10,9 +11,8 @@ export const AnimatedNumber: React.FC<AnimatedNumberProps> = ({
   value,
   duration = 2000,
 }) => {
-  const [displayValue, setDisplayValue] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null); 
-  const [hasStarted, setHasStarted] = useState(false); 
+  const [hasStarted, setHasStarted] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,29 +36,11 @@ export const AnimatedNumber: React.FC<AnimatedNumberProps> = ({
     };
   }, []);
 
-  useEffect(() => {
-    if (!hasStarted) return;
-
-    const start = Date.now();
-
-    const frame = () => {
-      const now = Date.now();
-      const progress = Math.min((now - start) / duration, 1);
-      const currentDisplayValue = Math.round(progress * value);
-
-      setDisplayValue(currentDisplayValue);
-
-      if (progress < 1) {
-        requestAnimationFrame(frame);
-      }
-    };
-
-    frame();
-
-    return () => {
-      setDisplayValue(value);
-    };
-  }, [hasStarted, value, duration]);
-
-  return <span ref={ref}>{displayValue}</span>;
+  return (
+    <span ref={ref}>
+      {hasStarted && (
+        <CountUp start={0} end={value} duration={duration / 1000} />
+      )}
+    </span>
+  );
 };
