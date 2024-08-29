@@ -12,7 +12,7 @@ export const TestimonialItem = ({ testimonial, name, isActive, image }:ITestimon
     const normalClass = "scale-90 bg-white h-[380px]";
 
     return (
-        <div className={`p-10 cursor-grab transition-transform duration-300 shadow-lg rounded-lg overflow-hidden mb-4 border ${isActive ? activeClass : normalClass}`}>
+        <div className={`p-4 sm:p-10 cursor-grab transition-transform duration-300 shadow-lg rounded-lg overflow-hidden mb-4 border ${isActive ? activeClass : normalClass}`}>
             <div className="flex mb-5">
                 <div>
                     <Image src={image} alt={name} />

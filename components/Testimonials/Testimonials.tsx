@@ -104,7 +104,7 @@ export const Testimonials = () => {
 
       <Slider {...settings}>
         {testimonialsData.map((testimonial, index) => (
-          <div key={index} className="p-2">
+          <div key={index} className="p-1 sm:p-2">
             <TestimonialItem
               testimonial={testimonial.text}
               name={testimonial.name}

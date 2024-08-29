@@ -46,7 +46,7 @@ export const Footer = () => {
             {/* Address */}
             <div className="col-span-2 order-2 sm:order-3">
               <h2 className="text-white pb-4">Address</h2>
-              <div className="flex flex-col text-white w-40">
+              <div className="flex flex-col text-white sm:w-40">
                 <p className="text-grey">
                   Shop No. 32-33 Durbar Stadium Shopping Complex, Durbar, Oyo.
                   Oyo State, Nigeria
@@ -61,9 +61,9 @@ export const Footer = () => {
               <input
                 type="text"
                 placeholder="Enter your Email"
-                className="text-gray placeholder:text-gray bg-transparent border-none outline-none p-4"
+                className="text-gray placeholder:text-gray bg-transparent border-none outline-none p-2 pl-3 py-3 sm:p-4 flex"
               />
-              <button className="text-white w-full h-full bg-primary p-4">
+              <button className="text-white w-full h-full bg-primary p-2 py-3 sm:p-4">
                 Subscribe
               </button>
             </div>

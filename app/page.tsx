@@ -19,7 +19,7 @@ export default function Home() {
   const { push } = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <main className="mt-[25px] md:mt-0">
+    <main className="overflow-x-hidden mt-[25px] md:mt-0">
       <section className="flex flex-col gap-8 h-full">
         <div className="h-full min-h-screen bg-[#010101]/60 bg-hero bg-center md:bg-top bg-no-repeat bg-cover bg-blend-multiply flex flex-col justify-center items-center md:py-20 space-y-4 md:space-y-10">
           <div className="flex flex-col justify-center items-center">

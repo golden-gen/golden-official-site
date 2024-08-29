@@ -39,7 +39,7 @@ const Navbar = () => {
     { link: "Team", path: "/team" },
   ];
   return (
-    <header className="w-full bg-white md:bg-transparent fixed top-0 left-0 right-0 z-50">
+    <header className="w-full overflow-x-hidden bg-white md:bg-transparent fixed top-0 left-0 right-0 z-50">
       <nav
         className={`py-2 md:py-6 lg:px-20 px-6 ${
           isSticky
