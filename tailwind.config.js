@@ -14,6 +14,9 @@ module.exports = {
         secondary: "#ECFAFF",
         "dark-primary": "#2179B5",
         blackish: "4F4E4E",
+        grey: "#AFAFAF",
+        gray: "#555555",
+        ccc: "#CCCCCC",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -26,6 +29,8 @@ module.exports = {
         Manrope: ["Manrope", "sans-serif"],
         SpaceGro: ["Space Grotesk", "sans-serif"],
         OpenSans: ["Open Sans", "sans-serif"],
+        Poppins: ["Poppins", "sans - serif"],
+        Nunito: ["Nunito", "sans - serif"],
       },
       lineClamp: {
         8: "8",

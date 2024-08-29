@@ -6,77 +6,97 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-[#22262F] w-full">
-      <div className="flex flex-col w-[90%] max-w-[1200px] mx-auto pt-[60px]">
-        <div className="grid grid-cols-2 md:grid-cols-12 mb-[60px] gap-0 md:gap-8">
-          <div className="col-span-3 order-3 md:order-1 flex flex-col gap-5 md:gap-[30px]">
-            <div>
-              <Link
-                href="/"
-                className="text-2xl font-semibold flex items-center space-x-1"
-              >
-                <span className="text-white font-bold text-xl md:text-2xl lg:text-3xl items-center font-SpaceGro">
-                  GOLDEN GENERATION
-                </span>
-              </Link>
-            </div>
-            <p className="text-white">
+      <div className="flex flex-col w-[95%] max-w-[1300px] mx-auto pt-[60px]">
+        <div className="grid grid-cols-2 md:grid-cols-12 mb-[60px] gap-0 md:gap-8 place-items-start items-start">
+          {/* Logo and Description */}
+          <div className="col-span-3 order-3 md:order-1 flex flex-col gap-4 mr-4">
+            <Link
+              href="/"
+              className="text-2xl font-semibold flex items-center space-x-1"
+            >
+              <span className="text-white font-bold text-xl md:text-2xl lg:text-3xl items-center font-SpaceGro">
+                GOLDEN GENERATION
+              </span>
+            </Link>
+            <p className="text-white font-Poppins">
               Set yourself up for success by becoming a golden member for your
               personal and professional growth.
             </p>
           </div>
-          <div className="grid grid-cols-4 sm:grid-cols-6 col-span-6 order-2 mb-[60px] md:mb-0 gap-6 pt-2">
+
+          {/* Links Section */}
+          <div className="grid grid-cols-4 sm:grid-cols-6 col-span-6 order-2 mb-[60px] md:mb-0 gap-6">
+            {/* Quick Links */}
             <div className="col-span-2">
-              <h2 className="text-white pb-[30px] pt-2">Quick Links</h2>
-              <div className="flex flex-col text-white space-y-[15px]">
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Team</a>
+              <h2 className="text-white pb-4 font-SpaceGro">Quick Links</h2>
+              <div className="flex flex-col gap-2 text-grey">
+                <Link href="/">Home</Link>
+                <Link href="/about">About Us</Link>
+                <Link href="/team">Team</Link>
               </div>
             </div>
+            {/* Get in Touch */}
             <div className="col-span-2 order-3 sm:order-2">
-              <h2 className="text-white pb-[30px] pt-2">Get in touch</h2>
-              <div className="flex flex-col text-white space-y-[15px]">
-                <a href="#">Contact Us</a>
-                <a href="#">Gallery</a>
+              <h2 className="text-white pb-4 font-SpaceGro">Get in Touch</h2>
+              <div className="flex flex-col gap-2 font-Roboto text-grey">
+                <Link href="/contact">Contact Us</Link>
+                <Link href="/gallery">Gallery</Link>
               </div>
             </div>
+            {/* Address */}
             <div className="col-span-2 order-2 sm:order-3">
-              <h2 className="text-white pb-[30px] pt-2">Address</h2>
-              <div className="flex flex-col text-white space-y-[15px]">
-                <p>
-                  Shop No. 32-33 Durbar Stadium Shopping Complex, Durbar,
-                  Oyo.Oyo State.Nigeria
+              <h2 className="text-white pb-4">Address</h2>
+              <div className="flex flex-col text-white w-40">
+                <p className="text-grey">
+                  Shop No. 32-33 Durbar Stadium Shopping Complex, Durbar, Oyo.
+                  Oyo State, Nigeria
                 </p>
               </div>
             </div>
           </div>
-          <div className="col-span-3 pt-4 order-1 md:order-3 mb-[60px] md:mb-0">
-            <h2 className="text-white">
-              We will only ever send you cool stuff!
-            </h2>
-            <div className="flex items-center border-b-2 border-[#D9D9D980] py-5 mb-4 gap-4">
+
+          {/* Newsletter and Social Links */}
+          <div className="col-span-3 order-1 md:order-3 mb-[60px] md:mb-0 ">
+            <div className="flex flex-row gap-0 items-center mb-4 bg-white rounded-xl">
               <input
                 type="text"
-                placeholder="Suscribe To Our NewsLetter"
-                className="text-white placeholder:text-rgba(240,240,240,0.70) bg-transparent border-none w-full outline-none"
+                placeholder="Enter your Email"
+                className="text-gray placeholder:text-gray bg-transparent border-none outline-none p-4"
               />
+              <button className="text-white w-full h-full bg-primary p-4">
+                Subscribe
+              </button>
             </div>
-            <div className="flex gap-5">
-              <a href="#">
+            <h2 className="text-ccc font-Roboto">
+              Your email is safe with us,we don’t spam.
+            </h2>
+            <h2 className="text-white font-Roboto py-2 text-lg font-bold ">
+              Follow Us
+            </h2>
+            <div className="flex flex-row gap-2 w-full items-center">
+              <Link href="#">
                 <TwitterIcon />
-              </a>
-              <a href="#">
+              </Link>
+              <Link href="#">
                 <LinkedinIcon />
-              </a>
-              <a href="#">
+              </Link>
+              <Link href="#">
                 <FacebookIcon />
-              </a>
+              </Link>
+              <Link href="/">
+                <span className="text-white font-bold text-[20px]/[16.43px] font-Roboto">
+                  GOLDEN GENERATION
+                </span>
+              </Link>
             </div>
           </div>
         </div>
+
         <hr className="text-grayish w-full hidden md:flex mb-10" />
-        <div className="flex flex-col md:flex-row justify-center mb-[30px]">
-          <p className="text-grayish mb-[27px] md:mb-0 text-center text-sm md:text-lg">
+
+        {/* Footer Bottom */}
+        <div className="flex flex-col md:flex-row justify-center mb-4 md:mb-8">
+          <p className="text-grayish mb-[27px] md:mb-0 text-center text-sm md:text-lg font-Nunito">
             &copy; Copyright {currentYear} Golden Generation. All rights
             reserved.
           </p>

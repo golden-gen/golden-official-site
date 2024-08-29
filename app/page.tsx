@@ -309,73 +309,53 @@ export default function Home() {
           data-aos-anchor-placement="top-bottom"
           className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-5"
         >
-          <div className="flex flex-col max-w-[348px] mx-auto space-y-5">
-            <div className="flex h-full max-h-[218px] w-full">
-              {/* <Image width={0} height={0} src={ggq1} loading="lazy" alt="GGQUIZ" className="w-full" /> */}
-              <Image
-                width={347}
-                height={218}
-                src={ggq1}
-                loading="lazy"
-                alt="GGQUIZ"
-                className="w-full"
-              />
-            </div>
-            <p className="px-2.5 font-Roboto font-semibold">
-              Annual Golden Generation Quiz Competition for Senior Secondary
-              School Students.
-            </p>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="uppercase py-[15px] px-[22px] bg-primary hover:bg-dark-primary transition duration-200 text-white font-Roboto text-[19px] w-full text-center"
+          {[
+            {
+              src: ggq1,
+              alt: "GGQUIZ",
+              description:
+                "Annual Golden Generation Quiz Competition for Senior Secondary School Students.",
+            },
+            {
+              src: ggq2,
+              alt: "GG Debate English",
+              description:
+                "Annual Golden Generation Debate Competition [English Language] for Senior Secondary School Students.",
+            },
+            {
+              src: ggq3,
+              alt: "GG Debate Yoruba",
+              description:
+                "Annual Golden Generation Debate Competition [Yoruba Language] for Senior Secondary School Students.",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col max-w-[348px] mx-auto space-y-5 h-full"
             >
-              JOIN TEAM
-            </button>
-          </div>
-          <div className="flex flex-col max-w-[348px] mx-auto space-y-5">
-            <div className="flex h-full max-h-[218px] w-full">
-              <Image
-                width={348}
-                height={218}
-                src={ggq2}
-                loading="lazy"
-                alt="GG Debate English"
-                className="w-full"
-              />
+              <div className="flex h-full max-h-[218px] w-full">
+                <Image
+                  width={348}
+                  height={218}
+                  src={item.src}
+                  loading="lazy"
+                  alt={item.alt}
+                  className="w-full"
+                />
+              </div>
+              <div className="flex-grow flex flex-col justify-between">
+                <p className="px-2.5 font-Roboto font-semibold pb-6">
+                  {item.description}
+                </p>
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="uppercase py-[15px] px-[22px] bg-primary hover:bg-dark-primary transition duration-200 text-white font-Roboto text-[19px] w-full text-center"
+                >
+                  JOIN TEAM
+                </button>
+              </div>
             </div>
-            <p className="px-2.5 font-Roboto font-semibold">
-              Annual Golden Generation Debate Competition [English Language] for
-              Senior Secondary School Students.
-            </p>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="uppercase py-[15px] px-[22px] bg-primary hover:bg-dark-primary transition duration-200 text-white font-Roboto text-[19px] w-full text-center"
-            >
-              JOIN TEAM
-            </button>
-          </div>
-          <div className="flex flex-col max-w-[348px] mx-auto space-y-5">
-            <div className="flex h-full max-h-[218px] w-full">
-              <Image
-                width={348}
-                height={218}
-                src={ggq3}
-                loading="lazy"
-                alt="GG Debate Yoruba"
-                className="w-full"
-              />
-            </div>
-            <p className="px-2.5 font-Roboto font-semibold">
-              Annual Golden Generation Debate Competition [Yoruba Language] for
-              Senior Secondary School Students.
-            </p>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="uppercase py-[15px] px-[22px] bg-primary hover:bg-dark-primary transition duration-200 text-white font-Roboto text-[19px] w-full text-center"
-            >
-              JOIN TEAM
-            </button>
-          </div>
+          ))}
         </div>
       </section>
       <section className="w-[calc(100%_-_32px)] max-w-[1200px] mx-auto space-y-10 md:space-y-16 mb-16">
