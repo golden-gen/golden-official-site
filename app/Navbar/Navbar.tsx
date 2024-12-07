@@ -33,17 +33,18 @@ const Navbar = () => {
   // set nav items
   const navItems = [
     { link: "Home", path: "/" },
+    { link: "GGQuiz 2024", path: "/ggquiz-2024" },
     { link: "About", path: "/about" },
-    { link: "Gallery", path: "/gallery" },
-    { link: "Blog", path: "/blog" },
     { link: "Team", path: "/team" },
+    // { link: "Gallery", path: "/gallery" },
+    // { link: "Blog", path: "/blog" },
   ];
   return (
     <header className="w-full overflow-x-hidden bg-white md:bg-transparent fixed top-0 left-0 right-0 z-50">
       <nav
         className={`py-2 md:py-6 lg:px-20 px-6 ${
           isSticky
-            ? "sticky top-0 left-0 right-0 border bg-white text-black duration-300 shadow-lg"
+            ? "sticky top-0 left-0 right-0 bg-white text-black duration-300 shadow-xl"
             : `${pathname === "/" ? "md:text-white" : "text-black"} shadow-none`
         }`}
       >

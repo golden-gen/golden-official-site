@@ -46,7 +46,7 @@ export const Footer = () => {
             {/* Address */}
             <div className="col-span-2 order-2 sm:order-3">
               <h2 className="text-white pb-4">Address</h2>
-              <div className="flex flex-col text-white sm:w-40">
+              <div className="flex flex-col text-white sm:w-fit">
                 <p className="text-grey">
                   Shop No. 32-33 Durbar Stadium Shopping Complex, Durbar, Oyo.
                   Oyo State, Nigeria
@@ -68,7 +68,7 @@ export const Footer = () => {
               </button>
             </div>
             <h2 className="text-ccc font-Roboto">
-              Your email is safe with us,we don’t spam.
+              Your email is safe with us,we don&apos;t spam.
             </h2>
             <h2 className="text-white font-Roboto py-2 text-lg font-bold ">
               Follow Us

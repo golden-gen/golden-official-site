@@ -30,7 +30,7 @@ const page = () => {
             viewport={{ once: false, amount: 0.5 }}
             className="text-2xl mb-20"
           >
-            Meet few of our technical team members
+            Meet few of our team members
           </motion.span>
 
           <motion.div
