@@ -55,39 +55,21 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Newsletter and Social Links */}
-          <div className="col-span-3 order-1 md:order-3 mb-[60px] md:mb-0 ">
-            <div className="flex flex-row gap-0 items-center mb-4 bg-white rounded-xl">
-              <input
-                type="text"
-                placeholder="Enter your Email"
-                className="text-gray placeholder:text-gray bg-transparent border-none outline-none p-2 pl-3 py-3 sm:p-4 flex"
-              />
-              <button className="text-white w-full h-full bg-primary p-2 py-3 sm:p-4">
-                Subscribe
-              </button>
-            </div>
-            <h2 className="text-ccc font-Roboto">
-              Your email is safe with us,we don&apos;t spam.
-            </h2>
+          {/* Social Links */}
+          <div className="col-span-3 order-1 md:order-3 mb-[60px] md:mb-0">
             <h2 className="text-white font-Roboto py-2 text-lg font-bold ">
-              Follow Us
+              Our Socials
             </h2>
-            <div className="flex flex-row gap-2 w-full items-center">
-              <Link href="#">
-                <TwitterIcon />
-              </Link>
-              <Link href="#">
-                <LinkedinIcon />
-              </Link>
-              <Link href="#">
-                <FacebookIcon />
-              </Link>
-              <Link href="/">
-                <span className="text-white font-bold text-[20px]/[16.43px] font-Roboto">
-                  GOLDEN GENERATION
-                </span>
-              </Link>
+            <div className="flex flex-row gap-2">
+                <Link href="#">
+                  <TwitterIcon />
+                </Link>
+                <Link href="#">
+                  <LinkedinIcon />
+                </Link>
+                <Link href="#">
+                  <FacebookIcon />
+                </Link>
             </div>
           </div>
         </div>

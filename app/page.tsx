@@ -63,20 +63,22 @@ export default function Home() {
           <p className="font-semibold font-serif text-sm md:text-xl 2xl:text-3xl text-center text-white">
             <em>...the future is our concern.</em>
           </p>
-          <button
-            onClick={() => push("/register")}
-            className="py-[15px] px-[22px] bg-primary hover:bg-dark-primary transition duration-200 text-white font-Roboto font-bold text-lg w-fit text-center uppercase"
-          >
-            Become a Member
-          </button>
+          <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+            <button
+              onClick={() => push("/ggquiz-2024")}
+              className="py-[15px] px-[22px] bg-primary hover:bg-dark-primary transition duration-200 text-white font-Roboto font-bold text-lg w-fit text-center uppercase"
+            >
+              Register for GGQuiz
+            </button>
+            <button
+              onClick={() => push("/register")}
+              className="py-[15px] px-[22px] bg-[#010101] hover:bg-[#010101]/60 transition duration-200 text-white font-Roboto font-bold text-lg w-fit text-center uppercase"
+            >
+              Become a Member
+            </button>
+          </div>
         </div>
         <div className="flex flex-col items-center mx-auto space-y-6 md:space-y-0">
-          <p
-            data-aos="fade-right"
-            className="text-center font-semibold text-lg pt-3 md:pt-6 pb-4 md:pb-12 font-Manrope"
-          >
-            Registration page for membership
-          </p>
           <h2
             data-aos="fade-up"
             className="text-3xl md:leading-tight font-semibold text-center uppercase font-Roboto pb-4 md:pb-6"
