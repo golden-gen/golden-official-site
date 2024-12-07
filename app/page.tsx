@@ -9,7 +9,7 @@ import act2 from "../public/images/act2.jpg";
 import act3 from "../public/images/act1.jpg";
 import team1 from "../public/team/elite.png";
 import team2 from "../public/team/faruq.png";
-import team3 from "../public/team/rahmlad.jpg";
+import team3 from "../public/team/abdrahman.jpg";
 import { Testimonials } from "@/components";
 import { AnimatedNumber, RegistrationModal, TypingEffect } from "./components";
 import { useRouter } from "next/navigation";
