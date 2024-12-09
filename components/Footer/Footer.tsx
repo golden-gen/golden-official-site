@@ -40,7 +40,7 @@ export const Footer = () => {
               <h2 className="text-white pb-4 font-SpaceGro">Get in Touch</h2>
               <div className="flex flex-col gap-2 font-Roboto text-grey">
                 <Link href="/contact">Contact Us</Link>
-                <Link href="/gallery">Gallery</Link>
+                {/* <Link href="/gallery">Gallery</Link> */}
               </div>
             </div>
             {/* Address */}
