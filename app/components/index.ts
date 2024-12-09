@@ -1,3 +1,3 @@
 export {AnimatedNumber} from './AnimatedNumber'
-export {RegistrationModal} from './RegistrationModal'
+export {RegistrationSuccess} from './RegistrationSuccess'
 export {TypingEffect} from './TypingEffect'

@@ -28,7 +28,7 @@ const page = () => {
             initial={"hidden"}
             whileInView={"show"}
             viewport={{ once: false, amount: 0.5 }}
-            className="text-2xl mb-20"
+            className="text-2xl mb-8"
           >
             Meet few of our team members
           </motion.span>
@@ -38,14 +38,13 @@ const page = () => {
             initial={"hidden"}
             whileInView={"show"}
             viewport={{ once: false, amount: 0.5 }}
-            className="flex flex-wrap justify-center items-center mx-auto gap-x-12 gap-y-20"
+            className="flex flex-wrap justify-center items-center mx-auto gap-x-12 gap-y-8"
           >
             {teams.map((team) => {
               return (
                 <div key={team.id} className="w-full md:w-[20.6rem]">
                   <div className="flex flex-col gap-4">
                     <div className="flex gap-8 items-center">
-                      <img src={team.img} alt="not seen" />
                       <div>
                         <p className="font-semibold font-Roboto">
                           {team.member}
@@ -62,6 +61,7 @@ const page = () => {
                 </div>
               );
             })}
+            <div>Would you love to make impact by becoming one of us? <Link href={'/register'} className="text-underline underline-offset-4"> Register now </Link></div>
           </motion.div>
 
           <motion.div
@@ -69,22 +69,17 @@ const page = () => {
             initial={"hidden"}
             whileInView={"show"}
             viewport={{ once: false, amount: 0.5 }}
-            className="relative w-full pt-6 pb-6 md:pb-24 mt-6 md:mt-16"
+            className="relative w-full pt-6 pb-6 md:pb-24 mt-6 md:mt-16 bg-[url('/images/medals.png')] bg-black/30 bg-blend-overlay"
           >
-            <img
-              src="/images/medals.png"
-              alt="not seen"
-              className="w-full lg:h-auto md:h-[35rem] h-[30rem]"
-            />
-            <p className="absolute top-16 md:right-16 right-2 md:w-[35rem] text-xl font-Roboto space-y-4">
-              {`“Building a stronger community is not just about bricks and
+            
+            <p className="text-white text-xl font-Roboto space-y-4 p-4">
+              “Building a stronger community is not just about bricks and
                 mortar; it's about weaving dreams, fostering unity, and
                 cultivating a legacy of shared empowerment. Together, we're
                 architects of positive change, constructing a future where every
                 voice resonates, and every individual contributes to the
-                masterpiece of community development."`}
+                masterpiece of community development." - Unknown
             </p>
-            <p className="absolute bottom-16 md:top-64 md:right-20 right-1 text-xl font-Roboto space-y-4">{`“Unknown”`}</p>
           </motion.div>
           <motion.div
             variants={fadeIn("left", 0.1)}

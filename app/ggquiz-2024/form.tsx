@@ -1,8 +1,10 @@
 import axios from "axios";
 import { FormikHelpers, useFormik } from "formik";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
+import { RegistrationSuccess } from "../components";
 
 interface initialValuesType {
   surname: string;
@@ -15,7 +17,14 @@ interface initialValuesType {
 }
 
 const RegistrationForm = () => {
+  const router = useRouter();
   const [isSubmitting, setSubmitting] = useState(false);
+  const [successData, setSuccessData] = useState({
+    surname: "",
+    othersName: "",
+    studentId: "",
+  });
+  const [isOpen, setIsOpen] = useState(false);
   const initialValues: initialValuesType = {
     surname: "",
     othersName: "",
@@ -26,28 +35,40 @@ const RegistrationForm = () => {
     school: "",
   };
 
-  const register = (values: initialValuesType, { resetForm }: FormikHelpers<initialValuesType>) => {
-    setSubmitting(true);
-    axios
-      .post(
+  const register = async (
+    values: initialValuesType,
+    { resetForm }: FormikHelpers<initialValuesType>
+  ) => {
+    try {
+      setSubmitting(true);
+
+      const res = await axios.post(
         `https://registration-api-xc9m.onrender.com/api/v1/reg/student`,
         values
-      )
-      .then((res) => {
-        setSubmitting(false);
-        resetForm();
-        toast(res.data.message, { type: "success" });
-      })
-      .catch((error) => {
-        setSubmitting(false);
-        const message = error.response?.message || error.response?.data;
+      );
 
-        if (message?.includes("E11000 duplicate")) {
-          toast("Phone number already used by another applicant", { type: "error" });
-        } else {
-          toast(message, { type: "error" });
-        }
-      });
+      setSubmitting(false);
+      resetForm();
+      console.log(res)
+      if (res.data) {
+        setSuccessData(res.data?.data || res.data);
+        setIsOpen(true);
+      } else {
+        toast("Something went wrong, try again!", { type: "warning" });
+      }
+    } catch (error: any) {
+      setSubmitting(false);
+
+      const message = error.response?.message || error.response?.data;
+
+      if (message?.includes("E11000 duplicate")) {
+        toast("Phone number already used by another applicant", {
+          type: "error",
+        });
+      } else {
+        toast(message || "An error occurred", { type: "error" });
+      }
+    }
   };
 
   const { handleChange, values, handleSubmit } = useFormik({
@@ -218,6 +239,17 @@ const RegistrationForm = () => {
           </form>
         </div>
       </div>
+      {successData.surname &&
+        successData.othersName &&
+        successData.studentId && (
+          <RegistrationSuccess
+            isOpen={isOpen}
+            onClose={() => setIsOpen(!isOpen)}
+            othersName={successData.othersName}
+            studentId={successData.studentId}
+            surname={successData.surname}
+          />
+        )}
     </>
   );
 };

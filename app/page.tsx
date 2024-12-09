@@ -11,7 +11,7 @@ import team1 from "../public/team/elite.png";
 import team2 from "../public/team/faruq.png";
 import team3 from "../public/team/abdrahman.jpg";
 import { Testimonials } from "@/components";
-import { AnimatedNumber, RegistrationModal, TypingEffect } from "./components";
+import { AnimatedNumber, TypingEffect } from "./components";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -60,7 +60,7 @@ export default function Home() {
             Welcome to the official website of Golden Generation Community
             Development Club (GGCDC). <br />{" "}
           </h3>
-          <p className="font-semibold font-serif text-sm md:text-xl 2xl:text-3xl text-center text-white">
+          <p className="font-semibold font-serif text-sm md:text-xl 2xl:text-3xl mb-2 text-center text-white">
             <em>...the future is our concern.</em>
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
@@ -387,7 +387,6 @@ export default function Home() {
         </div>
       </section>
       <Testimonials />
-      <RegistrationModal isOpen={isOpen} onClose={() => setIsOpen(!isOpen)} />
     </main>
   );
 }
