@@ -74,11 +74,11 @@ const page = () => {
             
             <p className="text-white text-xl font-Roboto space-y-4 p-4">
               “Building a stronger community is not just about bricks and
-                mortar; it's about weaving dreams, fostering unity, and
-                cultivating a legacy of shared empowerment. Together, we're
+                mortar; it&apos;s about weaving dreams, fostering unity, and
+                cultivating a legacy of shared empowerment. Together, we&apos;re
                 architects of positive change, constructing a future where every
                 voice resonates, and every individual contributes to the
-                masterpiece of community development." - Unknown
+                masterpiece of community development.&ldquot; - Unknown
             </p>
           </motion.div>
           <motion.div

@@ -33,7 +33,7 @@ export const RegistrationSuccess: React.FC<RegistrationSuccessProps> = ({
             <img src={'/images/success.gif'} alt="✨" />
         </h1>
         <h2 className='text-xl font-semibold text-center text-[#4F4E4E] mt-4 mb-2'>Registration Successful</h2>
-        <p className="text-center">Dear {surname} {othersName}, you have successfully registered for Golden Generation Quiz (GGQUIZ2024). Ensure you note down your student ID below as it'll be required for your CBT Assessment.</p>
+        <p className="text-center">Dear {surname} {othersName}, you have successfully registered for Golden Generation Quiz (GGQUIZ2024). Ensure you note down your student ID below as it&apos;ll be required for your CBT Assessment.</p>
         {studentId &&
           <button className='bg-primary hover:bg-primary/80 py-3 px-4 text-white rounded-md mt-4'>
               Student ID: {studentId}
