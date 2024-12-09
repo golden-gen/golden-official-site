@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 interface RegistrationSuccessProps {
   isOpen: boolean;
@@ -38,6 +39,7 @@ export const RegistrationSuccess: React.FC<RegistrationSuccessProps> = ({
               Student ID: {studentId}
           </button>
         }
+        <Link href={`/${studentId}/${othersName}`} className="underline underline-offset-2 text-center mt-8">Open in a new page</Link>
       </div>
     </div>
   );

@@ -84,6 +84,7 @@ const RegistrationForm = () => {
           <h2 className="text-xl font-semibold text-center text-[#4F4E4E] mb-8">
             Registration Form For GGQUIZ 2024
           </h2>
+          <button onClick={()=>setIsOpen(true)}>Open Modal</button>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label
@@ -239,9 +240,11 @@ const RegistrationForm = () => {
           </form>
         </div>
       </div>
-      {successData.surname &&
+      {
+        successData.surname &&
         successData.othersName &&
-        successData.studentId && (
+        successData.studentId && 
+        (
           <RegistrationSuccess
             isOpen={isOpen}
             onClose={() => setIsOpen(!isOpen)}
