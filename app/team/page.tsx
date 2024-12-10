@@ -69,7 +69,7 @@ const page = () => {
             initial={"hidden"}
             whileInView={"show"}
             viewport={{ once: false, amount: 0.5 }}
-            className="relative w-full pt-6 pb-6 md:pb-24 mt-6 md:mt-16 bg-[url('/images/medals.png')] bg-black/30 bg-blend-overlay"
+            className="relative w-full pt-6 pb-6 md:pb-24 mt-6 md:mt-16 bg-[url('/images/medals.png')] bg-black/30 bg-cover bg-blend-overlay"
           >
             
             <p className="text-white text-xl font-Roboto space-y-4 p-4">
@@ -78,7 +78,7 @@ const page = () => {
                 cultivating a legacy of shared empowerment. Together, we&apos;re
                 architects of positive change, constructing a future where every
                 voice resonates, and every individual contributes to the
-                masterpiece of community development.&ldquot; - Unknown
+                masterpiece of community development.&quot; - Unknown
             </p>
           </motion.div>
           <motion.div
