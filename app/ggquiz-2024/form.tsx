@@ -240,12 +240,12 @@ const RegistrationForm = () => {
         </div>
       </div>
       {
-        successData.surname &&
-        successData.othersName &&
-        successData.studentId && 
+        // successData.surname &&
+        // successData.othersName &&
+        // successData.studentId && 
         (
           <RegistrationSuccess
-            isOpen={isOpen}
+            isOpen={!isOpen}
             onClose={() => setIsOpen(!isOpen)}
             othersName={successData.othersName}
             studentId={successData.studentId}
