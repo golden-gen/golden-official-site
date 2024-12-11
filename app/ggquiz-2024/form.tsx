@@ -223,11 +223,11 @@ const RegistrationForm = () => {
               </select>
             </div>
 
-            <div>
+            <div className="pb-20">
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-3 px-4 text-white rounded-md mt-4 mb-20 ${
+                className={`w-full py-3 px-4 text-white rounded-md mt-4 mb-2 ${
                   isSubmitting
                     ? "bg-gray cursor-not-allowed"
                     : "bg-primary hover:bg-primary/80"
@@ -235,17 +235,18 @@ const RegistrationForm = () => {
               >
                 {isSubmitting ? "Submitting..." : "Submit"}
               </button>
+              <p className="text-center mx-auto italic">Note: Only register once to avoid disqualification.</p>
             </div>
           </form>
         </div>
       </div>
       {
-        // successData.surname &&
-        // successData.othersName &&
-        // successData.studentId && 
+        successData.surname &&
+        successData.othersName &&
+        successData.studentId && 
         (
           <RegistrationSuccess
-            isOpen={!isOpen}
+            isOpen={isOpen}
             onClose={() => setIsOpen(!isOpen)}
             othersName={successData.othersName}
             studentId={successData.studentId}

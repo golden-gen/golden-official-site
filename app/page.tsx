@@ -13,12 +13,11 @@ import team3 from "../public/team/abdrahman.jpg";
 import { Testimonials } from "@/components";
 import { AnimatedNumber } from "./components";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
 import { HeroCarousel } from "./components/HeroCarousel";
 
 export default function Home() {
   const { push } = useRouter();
-  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <main className="overflow-x-hidden mt-[25px] md:mt-0">
       <section className="flex flex-col gap-8 h-full">
@@ -205,7 +204,7 @@ export default function Home() {
           data-aos-easing="ease-in-sine"
           className="text-4xl font-semibold font-Roboto text-center"
         >
-          Trending GG2023 Competition
+          Trending GG2024 Competition
         </h1>
         <div
           data-aos="fade-up"
@@ -251,10 +250,10 @@ export default function Home() {
                   {item.description}
                 </p>
                 <button
-                  onClick={() => setIsOpen(!isOpen)}
+                  onClick={() => push('/ggquiz-2024')}
                   className="uppercase py-[15px] px-[22px] bg-primary hover:bg-dark-primary transition duration-200 text-white font-Roboto text-[19px] w-full text-center"
                 >
-                  JOIN TEAM
+                  See More
                 </button>
               </div>
             </div>

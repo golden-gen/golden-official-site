@@ -21,14 +21,62 @@ export const RegistrationSuccess: React.FC<RegistrationSuccessProps> = ({
   const handlePrint = () => {
     if (printRef.current) {
       const printContents = printRef.current.innerHTML;
-      const originalContents = document.body.innerHTML;
 
-      // Replace the body content with modal content for printing
-      document.body.innerHTML = printContents;
-      window.print();
-
-      // Restore the original content after printing
-      document.body.innerHTML = originalContents;
+      const printWindow = window.open(" ", "_blank");
+      if (printWindow) {
+        printWindow.document.open();
+        printWindow.document.write(`
+          <!DOCTYPE html>
+          <html lang="en">
+            <head>
+              <title>Golden Generation Quiz 2024 (GGQUIZ2024)</title>
+              <style>
+                body {
+                  font-family: Arial, sans-serif;
+                  margin: 10px;
+                  padding: 5px;
+                  line-height: 1.6;
+                  height: 100%;
+                  overflow: hidden;
+                }
+                div.printHidden, button, a {
+                  display: none;
+                }
+                .or {
+                    display: none !important;
+                }
+                @media print {
+                  html, body {
+                    height: auto;
+                    overflow: visible;
+                    margin: 0;
+                    padding: 0;
+                  }
+                  div.printHidden {
+                    display: none !important;
+                  }
+                }
+                </style>
+              </head>
+            <body>
+              ${printContents}
+              <p>
+                If you have any questions or need further assistance, please don't hesitate to contact us.
+              </p>
+              <p>
+                We look forward to seeing you there!
+              </p>
+              <p>Best regards, <br>
+              Golden Generation Team <br>
+              <i>...the future is our concern.</i>
+              </p>
+            </body>
+          </html>
+        `);
+        printWindow.document.close();
+        printWindow.print();
+        printWindow.close();
+      }
     }
   };
   if (!isOpen) return null;
@@ -59,20 +107,17 @@ export const RegistrationSuccess: React.FC<RegistrationSuccessProps> = ({
           Golden Generation Quiz (GGQUIZ2024). Ensure you note down your student
           ID below as it&apos;ll be required for your CBT Assessment.
         </p>
-        <p className="text-center print:text-lg">
-          You can also print a copy.
-        </p>
         {studentId && (
           <h3 className="text-3xl print:text-4xl font-semibold text-center text-[#4F4E4E] mt-4 mb-2">
             Student ID: {studentId}
           </h3>
         )}
-        <div className="flex justify-evenly items-center print:hidden">
+        <div className="flex justify-evenly items-center print:hidden printHidden">
           <button
             onClick={handlePrint}
             className="bg-primary hover:bg-primary/80 py-3 px-4 text-white rounded-md mt-8"
           >
-            Print
+            Print Slip
           </button>
           <p className="mt-8">or</p>
           <Link

@@ -40,7 +40,7 @@ export const Footer = () => {
               <h2 className="text-white pb-4 font-SpaceGro">Get in Touch</h2>
               <div className="flex flex-col gap-2 font-Roboto text-grey">
                 <Link href="/contact">Contact Us</Link>
-                {/* <Link href="/gallery">Gallery</Link> */}
+                <Link href="/register">Join Us</Link>
               </div>
             </div>
             {/* Address */}
@@ -48,8 +48,10 @@ export const Footer = () => {
               <h2 className="text-white pb-4">Address</h2>
               <div className="flex flex-col text-white sm:w-fit">
                 <p className="text-grey">
-                  Shop No. 32-33 Durbar Stadium Shopping Complex, Durbar, Oyo.
-                  Oyo State, Nigeria
+                  Elite Computer Technologies, 
+                  Behind Tola House,
+                  Isale Yidi, Agunpopo Area, <br />
+                  Oyo, Oyo State, Nigeria
                 </p>
               </div>
             </div>
@@ -61,14 +63,14 @@ export const Footer = () => {
               Our Socials
             </h2>
             <div className="flex flex-row gap-2">
+                <Link href="https://www.facebook.com/goldengenerationoyo/" target="_blank">
+                  <FacebookIcon />
+                </Link>
                 <Link href="#">
                   <TwitterIcon />
                 </Link>
                 <Link href="#">
                   <LinkedinIcon />
-                </Link>
-                <Link href="#">
-                  <FacebookIcon />
                 </Link>
             </div>
           </div>

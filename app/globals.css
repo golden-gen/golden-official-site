@@ -5,57 +5,61 @@
 @tailwind components;
 @tailwind utilities;
 html {
-    height: 100%;
-    min-height: 100vh;
+  height: 100%;
+  min-height: 100vh;
 }
 
 *,
 html,
 body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box !important;
-    scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  scroll-behavior: smooth;
 }
 
 .container::after {
-    position: absolute;
-    content: "";
-    background: #ff7a00;
-    height: 66px;
-    width: 80px;
-    bottom: -10px;
-    left: -10px;
-    z-index: -1;
+  position: absolute;
+  content: "";
+  background: #ff7a00;
+  height: 66px;
+  width: 80px;
+  bottom: -10px;
+  left: -10px;
+  z-index: -1;
 }
 
 .contain::before {
-    position: absolute;
-    content: "";
-    background: #ff7a00;
-    height: 66px;
-    width: 80px;
-    top: -10px;
-    right: -10px;
-    z-index: -1;
+  position: absolute;
+  content: "";
+  background: #ff7a00;
+  height: 66px;
+  width: 80px;
+  top: -10px;
+  right: -10px;
+  z-index: -1;
 }
 
 @keyframes blink {
-    50% {
-        opacity: 0;
-    }
+  50% {
+    opacity: 0;
+  }
 }
 
 .typing-cursor {
-    animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
 }
 
 button {
-    border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 @media print {
-    .print\:hidden {
-      display: none !important;
-    }
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
   }
-  
+  .print\:hidden {
+    display: none !important;
+  }
+}
