@@ -22,9 +22,9 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        hero3: "url('/images/hero-register.jpg')",
-        hero: "url('/images/hero.jpg')",
-        hero2: "url('/images/hero-donate.jpg')",
+        hero3: "url('/images/hero-register.webp')",
+        hero: "url('/images/hero.webp')",
+        hero2: "url('/images/hero-donate.webp')",
       },
       fontFamily: {
         Roboto: ["Roboto", "sans-serif"],

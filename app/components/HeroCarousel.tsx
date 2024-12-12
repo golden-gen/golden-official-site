@@ -6,7 +6,6 @@ import { ArrowRight } from "@/components/svg";
 export const HeroCarousel = () => {
   const { push } = useRouter();
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
 
   const slides = [
     {
@@ -47,27 +46,15 @@ export const HeroCarousel = () => {
   }, [currentSlide]);
 
     const handleNext = () => {
-      if (!isAnimating) {
-        setIsAnimating(true);
-        setTimeout(() => {
-          setCurrentSlide((prev) => (prev + 1) % slides.length);
-          setIsAnimating(false);
-        }, 500);
-      }
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
     };
   
     const handlePrev = () => {
-      if (!isAnimating) {
-        setIsAnimating(true);
-        setTimeout(() => {
-          setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-          setIsAnimating(false);
-        }, 500);
-      }
+      setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
     };
   
     return (
-      <div className={`${backgrounds[currentSlide]} transition-all duration-500 ease-in-out relative h-full min-h-screen bg-[#010101]/60 bg-center md:bg-top bg-no-repeat bg-cover bg-blend-multiply flex flex-col justify-center items-center md:py-20`}>
+      <div className={`${backgrounds[currentSlide]} transition-all duration-500 ease-in-out relative h-full min-h-screen bg-[#010101]/60 bg-center md:bg-top bg-no-repeat bg-cover bg-blend-multiply flex flex-col justify-center items-center py-20`}>
         <div className="overflow-hidden w-full max-w-5xl mx-auto">
           {/* Slides Wrapper */}
           <div
@@ -109,11 +96,10 @@ export const HeroCarousel = () => {
         </div>
   
         {/* Navigation Controls */}
-        <div className="absolute bottom-12 lg:bottom-none top-none lg:top-1/2 flex justify-between w-full h-fit px-8">
+        <div className="absolute bottom-8 sm:bottom-12 lg:bottom-none top-none lg:top-1/2 flex justify-between w-full h-fit px-8">
           <button
             className="text-white font-bold text-lg border border-white px-3 py-2 hover:bg-gray transition duration-200 active:scale-90 rotate-180"
             onClick={handlePrev}
-            disabled={isAnimating}
             aria-label="previous"
           >
             <ArrowRight />
@@ -121,7 +107,6 @@ export const HeroCarousel = () => {
           <button
             className="text-white font-bold text-lg border border-white px-3 py-2 hover:bg-gray transition duration-200 active:scale-90"
             onClick={handleNext}
-            disabled={isAnimating}
             aria-label="next"
           >
             <ArrowRight />
