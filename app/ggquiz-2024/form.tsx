@@ -43,7 +43,7 @@ const RegistrationForm = () => {
       setSubmitting(true);
 
       const res = await axios.post(
-        `https://registration-api-xc9m.onrender.com/api/v1/reg/student`,
+        `https://registration-api-qvby.onrender.com/`,
         values
       );
 
