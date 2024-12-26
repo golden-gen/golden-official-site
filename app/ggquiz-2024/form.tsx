@@ -42,8 +42,8 @@ const RegistrationForm = () => {
     try {
       setSubmitting(true);
 
-      const res = await axios.post(
-        `https://registration-api-qvby.onrender.com/`,
+      const res = await axios.post(        
+        `https://registration-api-qvby.onrender.com/api/v1/reg/student`,
         values
       );
 
