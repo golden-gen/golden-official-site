@@ -73,12 +73,23 @@ export const RegistrationSuccess: React.FC<RegistrationSuccessProps> = ({
       const printContents = printRef.current.innerHTML;
       const originalContents = document.body.innerHTML;
 
-      // Replace the body content with modal content for printing
-      document.body.innerHTML = printContents;
-      window.print();
+      // 1. Define the restoration function
+      const restoreOriginalContent = () => {
+        document.body.innerHTML = originalContents;
+        // 3. Remove the event listener to clean up
+        window.removeEventListener("onafterprint", restoreOriginalContent);
+        // Optional: Re-scroll to where the user was before printing
+        window.scrollTo(0, 0);
+      };
 
-      // Restore the original content after printing
-      document.body.innerHTML = originalContents;
+      // 2. Attach the event listener *before* triggering print
+      window.addEventListener("onafterprint", restoreOriginalContent);
+
+      // Replace the body content with print content
+      document.body.innerHTML = printContents;
+
+      // Trigger the print dialog
+      window.print();
     }
   };
 
@@ -117,12 +128,11 @@ export const RegistrationSuccess: React.FC<RegistrationSuccessProps> = ({
         )}
         <div className="hidden print:block print:text-lg">
           <p className="print:mb-2">
-            You are required to show up at our office with your slip using the
-            details below: <br />
-            <strong>Address: </strong> Elite Computer Technology, Behind
-            Tola&apos;s House, Agunpopo Area, Oyo, Oyo State. <br />
-            Between any of the dates below: <br />
-            <strong>Dates: </strong> 28th - 29th December, 2025. <br />
+            You are required to show up for the CBT with the following details:{" "}
+            <br />
+            <strong>Location: </strong> Oranyan Grammar School, Sabo Area, Oyo,
+            Oyo State. <br />
+            <strong>Date: </strong> 8th of November, 2025. <br />
             <strong>Time: </strong> 9:00am prompt
           </p>
           <p className="print:mb-2">
