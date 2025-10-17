@@ -130,7 +130,7 @@ export const RegistrationSuccess: React.FC<RegistrationSuccessProps> = ({
           <p className="print:mb-2">
             You are required to show up for the CBT with the following details:{" "}
             <br />
-            <strong>Location: </strong> Oranyan Grammar School, Sabo Area, Oyo,
+            <strong>Venue: </strong> Oranyan Grammar School, Sabo Area, Oyo,
             Oyo State. <br />
             <strong>Date: </strong> 8th of November, 2025. <br />
             <strong>Time: </strong> 9:00am prompt
