@@ -42,14 +42,14 @@ const RegistrationForm = () => {
     try {
       setSubmitting(true);
 
-      const res = await axios.post(        
+      const res = await axios.post(
         `https://registration-api-qvby.onrender.com/api/v1/reg/student`,
         values
       );
 
       setSubmitting(false);
       resetForm();
-      console.log(res)
+      console.log(res);
       if (res.data) {
         setSuccessData(res.data?.data || res.data);
         setIsOpen(true);
@@ -82,7 +82,7 @@ const RegistrationForm = () => {
       <div className="flex items-center justify-center">
         <div className="w-full max-w-md">
           <h2 className="text-xl font-semibold text-center text-[#4F4E4E] mb-8">
-            Registration Form For GGQUIZ 2024
+            Registration Form For GGQUIZ 2025
           </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
@@ -235,16 +235,16 @@ const RegistrationForm = () => {
               >
                 {isSubmitting ? "Submitting..." : "Submit"}
               </button>
-              <p className="text-center mx-auto italic">Note: Only register once to avoid disqualification.</p>
+              <p className="text-center mx-auto italic">
+                Note: Only register once to avoid disqualification.
+              </p>
             </div>
           </form>
         </div>
       </div>
-      {
-        successData.surname &&
+      {successData.surname &&
         successData.othersName &&
-        successData.studentId && 
-        (
+        successData.studentId && (
           <RegistrationSuccess
             isOpen={isOpen}
             onClose={() => setIsOpen(!isOpen)}

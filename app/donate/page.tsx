@@ -32,10 +32,10 @@ export default function Donate() {
                 GENERATION OYO
               </div>
               <div className="text-sm mb-2">
-                <span className="font-semibold">Account Number:</span>
+                <span className="font-semibold">Account Number:</span> 2178254317 
               </div>
               <div className="text-sm">
-                <span className="font-semibold">Bank:</span>
+                <span className="font-semibold">Bank:</span> UBA (United Bank for Africa)
               </div>
             </div>
             <div className="flex flex-col gap-5 items-center md:items-start">

@@ -33,7 +33,7 @@ const Navbar = () => {
   // set nav items
   const navItems = [
     { link: "Home", path: "/" },
-    { link: "GGQuiz 2024", path: "/ggquiz-2024" },
+    { link: "GGQuiz 2025", path: "/ggquiz-2025" },
     { link: "About", path: "/about" },
     { link: "Team", path: "/team" },
     // { link: "Gallery", path: "/gallery" },
@@ -119,7 +119,7 @@ const Navbar = () => {
             <Link
               href={item.path}
               key={item.path}
-               onClick={toggleMenu}
+              onClick={toggleMenu}
               className="block text-lg hover:text-primary first::font-medium font-Roboto"
             >
               {item.link}
@@ -130,8 +130,11 @@ const Navbar = () => {
             whileTap={{ scale: 1 }}
             transition={{ duration: 0.3 }}
           >
-            <Link href="/donate"
-             onClick={toggleMenu} className="bg-primary text-white p-4 py-2 font-bold">
+            <Link
+              href="/donate"
+              onClick={toggleMenu}
+              className="bg-primary text-white p-4 py-2 font-bold"
+            >
               Donate
             </Link>
           </motion.button>

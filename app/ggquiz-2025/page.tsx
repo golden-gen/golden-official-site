@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import RegistrationForm from "./form";
 
-export default function GGQUIZ2024() {
+export default function GGQUIZ2025() {
   return (
     <main className="mt-28">
       <div className="px-8 md:px-20 flex flex-col justify-center md:max-w-screen-2xl mx-auto overflow-x-hidden">
@@ -38,7 +38,7 @@ export default function GGQUIZ2024() {
             viewport={{ once: false, amount: 0.5 }}
             className="text-4xl font-semibold text-[#4F4E4E] text-center"
           >
-            Golden Generation Quiz 2024
+            Golden Generation Quiz 2025
           </motion.h1>
           <motion.div
             variants={fadeIn("left", 0.1)}
@@ -53,8 +53,8 @@ export default function GGQUIZ2024() {
             <h3 className="md:w-[33.81rem] font-semibold text-[#4F4E4E] text-base md:text-lg text-center p-4">
               Eligility Criteria: To be eligible to apply, you must at that time
               be in any of the classes SS 1, SS 2 or SS 3 in any secondary
-              school (Private and Public) in Nigeria. The registration form below must
-              be filled and submitted.
+              school (Private and Public) in Nigeria. The registration form
+              below must be filled and submitted.
             </h3>
           </motion.div>
         </div>

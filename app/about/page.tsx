@@ -119,15 +119,20 @@ export default function AboutPage() {
               Registration Status: The registration is currently opened.
             </h3>
             <h3 className="md:w-[33.81rem] font-semibold text-[#4F4E4E] text-lg text-center">
-              Eligility Criteria: To be eligible to apply, you must
-              be in any of the classes SS 1, SS 2 or SS 3 in any secondary
-              school (Private and Public) in Nigeria. The registration form must
-              be filled and submitted online via{" "}
-              <Link href="/ggquiz-2024" className="underline underline-offset-4">GGQUIZ 2024</Link>.
+              Eligility Criteria: To be eligible to apply, you must be in any of
+              the classes SS 1, SS 2 or SS 3 in any secondary school (Private
+              and Public) in Nigeria. The registration form must be filled and
+              submitted online via{" "}
+              <Link
+                href="/ggquiz-2025"
+                className="underline underline-offset-4"
+              >
+                GGQUIZ 2025
+              </Link>
+              .
             </h3>
           </motion.div>
         </div>
-        
       </div>
     </main>
   );

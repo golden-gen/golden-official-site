@@ -11,13 +11,13 @@ export default async function SuccessPage({params}:{params: Promise<{studentId: 
             "school": "Golden Generation School",
             "_id": "67571045aef18a7e51e0e2e5",
             "__v": 0,
-            "studentId": "ST-88676-GG2024"
+            "studentId": "ST-88676-GG2025"
         }
     }
   console.log(params);
   // let surname= 'a'
   // let otherName= 'b'
-  // let studentId= 'ST-88676-GG2024'
+  // let studentId= 'ST-88676-GG2025'
   // const { surname, otherName, studentId };
 
   // const slug = (await params).slug
@@ -33,7 +33,7 @@ export default async function SuccessPage({params}:{params: Promise<{studentId: 
             <img src={'/images/success.gif'} alt="✨" />
         </h1>
         <h2 className='text-xl font-semibold text-center text-[#4F4E4E] mt-4 mb-2'>Registration Successful</h2>
-        <p className="text-center">Dear {othersName}, you have successfully registered for Golden Generation Quiz (GGQUIZ2024). Ensure you note down your student ID below as it&apos;ll be required for your CBT Assessment.</p>
+        <p className="text-center">Dear {othersName}, you have successfully registered for Golden Generation Quiz (GGQUIZ2025). Ensure you note down your student ID below as it&apos;ll be required for your CBT Assessment.</p>
         {studentId &&
           <button className='bg-primary hover:bg-primary/80 py-3 px-4 text-white rounded-md mt-4'>
               Student ID: {studentId}

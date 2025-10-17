@@ -97,7 +97,6 @@ export default function Home() {
                     alt="President"
                     className="z-10 relative rounded-full"
                   />
-                  
                 </div>
                 <div className="flex flex-col items-center mb-4 md:mb-10 text-lg font-Roboto">
                   <h3 className="text-center font-bold">
@@ -204,7 +203,7 @@ export default function Home() {
           data-aos-easing="ease-in-sine"
           className="text-4xl font-semibold font-Roboto text-center"
         >
-          Trending GG2024 Competition
+          Trending GG2025 Competition
         </h1>
         <div
           data-aos="fade-up"
@@ -250,7 +249,7 @@ export default function Home() {
                   {item.description}
                 </p>
                 <button
-                  onClick={() => push('/ggquiz-2024')}
+                  onClick={() => push("/ggquiz-2025")}
                   className="uppercase py-[15px] px-[22px] bg-primary hover:bg-dark-primary transition duration-200 text-white font-Roboto text-[19px] w-full text-center"
                 >
                   See More

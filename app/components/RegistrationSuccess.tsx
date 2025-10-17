@@ -28,7 +28,7 @@ export const RegistrationSuccess: React.FC<RegistrationSuccessProps> = ({
           <!DOCTYPE html>
           <html lang="en">
             <head>
-              <title>Golden Generation Quiz 2024 (GGQUIZ2024)</title>
+              <title>Golden Generation Quiz 2025 (GGQUIZ2025)</title>
               <style>
                 body {
                   font-family: Arial, sans-serif;
@@ -76,7 +76,7 @@ export const RegistrationSuccess: React.FC<RegistrationSuccessProps> = ({
       // Replace the body content with modal content for printing
       document.body.innerHTML = printContents;
       window.print();
-      
+
       // Restore the original content after printing
       document.body.innerHTML = originalContents;
     }
@@ -107,7 +107,7 @@ export const RegistrationSuccess: React.FC<RegistrationSuccessProps> = ({
         </h2>
         <p className="text-center print:text-lg print:text-left">
           Dear {surname} {othersName}, you have successfully registered for
-          Golden Generation Quiz (GGQUIZ2024). Ensure you note down your student
+          Golden Generation Quiz (GGQUIZ2025). Ensure you note down your student
           ID below as it&apos;ll be required for your CBT Assessment.
         </p>
         {studentId && (
@@ -122,7 +122,7 @@ export const RegistrationSuccess: React.FC<RegistrationSuccessProps> = ({
             <strong>Address: </strong> Elite Computer Technology, Behind
             Tola&apos;s House, Agunpopo Area, Oyo, Oyo State. <br />
             Between any of the dates below: <br />
-            <strong>Dates: </strong> 28th - 29th December, 2024. <br />
+            <strong>Dates: </strong> 28th - 29th December, 2025. <br />
             <strong>Time: </strong> 9:00am prompt
           </p>
           <p className="print:mb-2">
