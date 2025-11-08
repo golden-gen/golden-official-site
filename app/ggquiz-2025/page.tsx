@@ -48,7 +48,7 @@ export default function GGQUIZ2025() {
             className="flex flex-col items-center justify-center mx-auto bg-[#F9F9F9] border border-1 border-[#E1E1E1] rounded-lg py-12"
           >
             <h3 className="md:w-[33.81rem] font-semibold text-[#4F4E4E] text-base md:text-lg text-center">
-              Registration Status: The registration is currently opened.
+              Registration Status: The registration for Golden Generation Quiz 2025 is currently closed. <br /> Be on the lookout for GGQuiz 2026
             </h3>
             <h3 className="md:w-[33.81rem] font-semibold text-[#4F4E4E] text-base md:text-lg text-center p-4">
               Eligility Criteria: To be eligible to apply, you must at that time
@@ -58,7 +58,7 @@ export default function GGQUIZ2025() {
             </h3>
           </motion.div>
         </div>
-        <RegistrationForm />
+        {/* <RegistrationForm /> */}
         <div className="hidden flex-col justify-center mx-auto gap-4">
           <motion.div
             variants={fadeIn("up", 0.1)}
