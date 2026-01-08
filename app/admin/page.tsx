@@ -1,5 +1,5 @@
 'use client'
-import { exportToExcel, exportToPdf } from '@/utils/helper';
+// import { exportToExcel, exportToPdf } from '@/utils/helper';
 import React, { useState, useEffect, useMemo, FormEvent, ChangeEvent } from 'react';
 
 // Define the structure of a single student record based on the API response
@@ -208,7 +208,7 @@ const Dashboard: React.FC = () => {
       <div style={styles.header}>
         <h1 className='text-xl font-semibold'>Student Registration Dashboard 📊</h1>
         <div style={styles.buttonGroup}>
-          <button onClick={()=>exportToExcel(students)} style={styles.exportExcelButton}>
+          <button disbled={truess} style={styles.exportExcelButton}>
             Export to Excel (CSV)
           </button>
           <button onClick={()=>exportToPdf(students)} style={styles.exportPdfButton}>
