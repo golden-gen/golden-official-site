@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
-import { teams } from "./data";
+import { fadeIn } from "@/src/utils/variants";
+import { teams } from "@/src/features/team/data";
 import Link from "next/link";
 
 const page = () => {
@@ -61,7 +61,16 @@ const page = () => {
                 </div>
               );
             })}
-            <div>Would you love to make impact by becoming one of us? <Link href={'/register'} className="text-underline underline-offset-4"> Register now </Link></div>
+            <div>
+              Would you love to make impact by becoming one of us?{" "}
+              <Link
+                href={"/register"}
+                className="text-underline underline-offset-4"
+              >
+                {" "}
+                Register now{" "}
+              </Link>
+            </div>
           </motion.div>
 
           <motion.div
@@ -71,14 +80,13 @@ const page = () => {
             viewport={{ once: false, amount: 0.5 }}
             className="relative w-full pt-6 pb-6 md:pb-24 mt-6 md:mt-16 bg-[url('/images/medals.png')] bg-black/30 bg-cover bg-blend-overlay"
           >
-            
             <p className="text-white text-xl font-Roboto space-y-4 p-4">
               “Building a stronger community is not just about bricks and
-                mortar; it&apos;s about weaving dreams, fostering unity, and
-                cultivating a legacy of shared empowerment. Together, we&apos;re
-                architects of positive change, constructing a future where every
-                voice resonates, and every individual contributes to the
-                masterpiece of community development.&quot; - Unknown
+              mortar; it&apos;s about weaving dreams, fostering unity, and
+              cultivating a legacy of shared empowerment. Together, we&apos;re
+              architects of positive change, constructing a future where every
+              voice resonates, and every individual contributes to the
+              masterpiece of community development.&quot; - Unknown
             </p>
           </motion.div>
           <motion.div

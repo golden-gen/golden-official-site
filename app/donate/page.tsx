@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { PaystackCheckout } from "./paystack-checkout";
+import { PaystackCheckout } from "@/src/features/donate/paystack-checkout";
 import Link from "next/link";
 
 export default function Donate() {

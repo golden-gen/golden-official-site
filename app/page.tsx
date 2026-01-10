@@ -10,10 +10,10 @@ import act3 from "../public/images/act1.jpg";
 import team1 from "../public/team/elite.png";
 import team2 from "../public/team/faruq.png";
 import team3 from "../public/team/abdrahman.jpg";
-import { Testimonials } from "@/components";
-import { AnimatedNumber } from "./components";
+import { Testimonials } from "@/src/components/Testimonials/Testimonials";
+import { AnimatedNumber } from "@/src/components/AnimatedNumber";
 import { useRouter } from "next/navigation";
-import { HeroCarousel } from "./components/HeroCarousel";
+import { HeroCarousel } from "@/src/features/home/HeroCarousel";
 
 export default function Home() {
   const { push } = useRouter();

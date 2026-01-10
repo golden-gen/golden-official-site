@@ -1,11 +1,9 @@
 "use client";
+import { useParams } from "next/navigation";
 
-export default async function SuccessPage({
-  params,
-}: {
-  params: Promise<{ studentId: string; othersName: string }>;
-}) {
-  const studentId = (await params).studentId;
+export default function SuccessPage() {
+  const params = useParams();
+  const studentId = params?.studentId;
 
   return (
     <div className="flex flex-col justify-center items-center min-h-dvh">

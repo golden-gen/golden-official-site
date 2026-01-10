@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import TypingEffect from "./TypingEffect";
+import TypingEffect from "@/src/components/TypingEffect";
 import { useRouter } from "next/navigation";
 
 export const OldHero = () => {

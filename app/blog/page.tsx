@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
-import { blogData, blogData1 } from "./data";
+import { blogData, blogData1 } from "@/src/features/blog/data";
 import { BsStopwatch } from "react-icons/bs";
 import { CiLock, CiSearch } from "react-icons/ci";
 import { IoDocumentOutline } from "react-icons/io5";
 import { FaYoutube, FaTwitter, FaInstagramSquare } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
+import { fadeIn } from "@/src/utils/variants";
 import Image from "next/image";
 
 export default function BlogPage() {

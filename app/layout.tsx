@@ -1,9 +1,9 @@
 // app/layout.tsx
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Navbar from "./Navbar/Navbar";
-import { Footer } from "@/components";
-import AOSProvider from "./AOSProvider";
+import Navbar from "@/src/components/Navbar/Navbar";
+import { Footer } from "@/src/components/Footer/Footer";
+import AOSProvider from "@/src/providers/AOSProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 

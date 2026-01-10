@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { ArrowRight } from "@/components/svg";
+import { ArrowRight } from "@/src/components/svg";
 
 export const HeroCarousel = () => {
   const { push } = useRouter();
