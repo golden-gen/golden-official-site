@@ -208,12 +208,12 @@ const Dashboard: React.FC = () => {
       <div style={styles.header}>
         <h1 className='text-xl font-semibold'>Student Registration Dashboard 📊</h1>
         <div style={styles.buttonGroup}>
-          <button disbled={truess} style={styles.exportExcelButton}>
+          {/* <button disbled={true} style={styles.exportExcelButton}>
             Export to Excel (CSV)
           </button>
           <button onClick={()=>exportToPdf(students)} style={styles.exportPdfButton}>
             Export to PDF
-          </button>
+          </button> */}
           <button onClick={handleLogout} style={styles.logoutButton}>
             Log Out
           </button>
