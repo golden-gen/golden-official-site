@@ -1,3 +1,5 @@
+"use client";
+
 import axios from "axios";
 import { FormikHelpers, useFormik } from "formik";
 import { useRouter } from "next/navigation";

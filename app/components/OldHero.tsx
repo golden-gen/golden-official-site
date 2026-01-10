@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import TypingEffect from "./TypingEffect";
 import { useRouter } from "next/navigation";
