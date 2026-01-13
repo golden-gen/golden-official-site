@@ -7,9 +7,6 @@ import ggq3 from "../public/images/quiz3.jpg";
 import act1 from "../public/images/act1.jpg";
 import act2 from "../public/images/act2.jpg";
 import act3 from "../public/images/act1.jpg";
-import team1 from "../public/team/elite.png";
-import team2 from "../public/team/faruq.png";
-import team3 from "../public/team/abdrahman.jpg";
 import { Testimonials } from "@/src/components/Testimonials/Testimonials";
 import { AnimatedNumber } from "@/src/components/AnimatedNumber";
 import { useRouter } from "next/navigation";
@@ -73,89 +70,84 @@ export default function Home() {
             data-aos="fade-up"
             className="text-3xl font-semibold text-center font-Roboto pb-4"
           >
-            Our Serving Executives.
+            Organization Structure
           </h1>
           <p
             data-aos="zoom-in-up"
             className="text-center text-lg w-full px-6 md:w-[40rem] text-blackish"
           >
-            Golden Generation Classes are taught by industry leaders excited to{" "}
-            share their tools, techniques, and Professional journey with you.
+            Golden Generation Community Development Club operates through a
+            structured network of dedicated teams.
           </p>
-          <div className="relative">
+          <div className="relative w-full">
             <div className="absolute bg-primary hidden md:flex w-full h-1/3 top-1/3 -z-10 mt-10"></div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto w-[90%] max-w-md md:max-w-6xl mt-10 md:mt-20">
+              {/* International Team */}
               <div
                 data-aos="fade-right"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
-                className="bg-[#F9F9F9] font-Roboto shadow rounded-lg flex flex-col items-center px-4"
+                className="bg-[#F9F9F9] font-Roboto shadow rounded-lg flex flex-col items-center p-8 min-h-[300px] justify-between"
               >
-                <div className="my-[25px] relative">
-                  <Image
-                    src={team1}
-                    alt="President"
-                    className="z-10 relative rounded-full"
-                  />
-                </div>
-                <div className="flex flex-col items-center mb-4 md:mb-10 text-lg font-Roboto">
-                  <h3 className="text-center font-bold">
-                    Jimoh Lawal Akinlabi
+                <div className="flex flex-col items-center">
+                  <h3 className="text-2xl font-bold mb-4 text-center">
+                    International Team
                   </h3>
-                  <h4>President</h4>
+                  <p className="text-center mb-6 text-gray-600">
+                    Comprising Patrons, Advisers, and global members who provide
+                    high-level guidance and extend our reach across borders.
+                  </p>
                 </div>
-                <p className="text-center mb-10">
-                  The president of our dear organization and the CEO, Elite
-                  Computer Technologies.
-                </p>
+                <button
+                  onClick={() => push("/team")}
+                  className="px-8 py-3 bg-primary text-white rounded-lg hover:bg-dark-primary transition-colors uppercase font-medium"
+                >
+                  View Team
+                </button>
               </div>
+
+              {/* National Team */}
               <div
-                data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
-                className="bg-[#F9F9F9] shadow rounded-lg flex flex-col items-center px-4 font-Roboto"
+                data-aos="flip-up"
+                className="bg-[#F9F9F9] font-Roboto shadow rounded-lg flex flex-col items-center p-8 min-h-[300px] justify-between"
               >
-                <div className="my-[25px] relative">
-                  <Image
-                    src={team2}
-                    alt="Coordinator"
-                    className="z-10 relative rounded-full"
-                  />
-                </div>
-                <div className="flex flex-col items-center mb-4 md:mb-10 font-Roboto text-lg">
-                  <h3 className="text-center font-bold">
-                    Adebayo Faruq Adebayo
+                <div className="flex flex-col items-center">
+                  <h3 className="text-2xl font-bold mb-4 text-center">
+                    National Team
                   </h3>
-                  <h4>Coordinator</h4>
+                  <p className="text-center mb-6 text-gray-600">
+                    The central executive body led by the President, responsible
+                    for strategic planning, policy-making, and overall
+                    administration.
+                  </p>
                 </div>
-                <p className="text-center mb-10 font-Roboto">
-                  The organization current coordinator and the technical team
-                  content creator.
-                </p>
+                <button
+                  onClick={() => push("/team")}
+                  className="px-8 py-3 bg-primary text-white rounded-lg hover:bg-dark-primary transition-colors uppercase font-medium"
+                >
+                  View Team
+                </button>
               </div>
+
+              {/* Local Team */}
               <div
                 data-aos="fade-left"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
-                className="bg-[#F9F9F9] shadow rounded-lg flex flex-col items-center px-4"
+                className="bg-[#F9F9F9] font-Roboto shadow rounded-lg flex flex-col items-center p-8 min-h-[300px] justify-between"
               >
-                <div className="my-[25px] relative">
-                  <Image
-                    src={team3}
-                    alt="Asst. Coordinator"
-                    className="z-10 relative rounded-full"
-                  />
-                </div>
-                <div className="flex flex-col items-center mb-4 md:mb-10 font-Roboto text-lg">
-                  <h3 className="text-center font-bold">
-                    Abdrahman Adebayo Oladimeji
+                <div className="flex flex-col items-center">
+                  <h3 className="text-2xl font-bold mb-4 text-center">
+                    Local Team
                   </h3>
-                  <h4>Asst. Coordinator</h4>
+                  <p className="text-center mb-6 text-gray-600">
+                    Grassroots coordinators and officers who implement our
+                    programs and engage directly with the community at the local
+                    level.
+                  </p>
                 </div>
-                <p className="text-center mb-10">
-                  The organization assistance coordinator and one of the
-                  technical team frontend developers.
-                </p>
+                <button
+                  onClick={() => push("/team")}
+                  className="px-8 py-3 bg-primary text-white rounded-lg hover:bg-dark-primary transition-colors uppercase font-medium"
+                >
+                  View Team
+                </button>
               </div>
             </div>
           </div>
